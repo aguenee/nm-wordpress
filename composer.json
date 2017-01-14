@@ -1,0 +1,38 @@
+{
+    "name": "aguenee/nm-wordpress",
+    "description": "Nicolas Mingasson's Portfolio",
+    "license": "",
+    "authors": [
+        {
+            "name": "Nicolas Mingasson's Portfolio",
+            "email": "audreyguenee@free.fr"
+        }
+    ],
+    "config": {
+        "secure-http": false
+    },
+    "repositories":[
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/advanced-custom-fields": "4.4.11",
+        "wpackagist-plugin/cookie-notice": "1.2.37",
+        "wpackagist-plugin/loco-translate": "2.0.10",
+        "wpackagist-plugin/polylang": "2.0.11",
+        "wpackagist-plugin/wordpress-seo": "4.0",
+        "wpackagist-plugin/google-analytics-dashboard-for-wp": "4.9.5"
+    },
+    "require-dev": {
+        "phing/phing": "2.*"
+    },
+    "extra": {
+        "installer-paths": {
+            "src/wp-content/themes/{$name}/": ["type:wordpress-theme"],
+            "src/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "src/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+        }
+    }
+}
