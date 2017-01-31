@@ -1,0 +1,200 @@
+.thumbnail-book {
+
+	small {
+		font-size: 70%;
+	}
+
+	.corner {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    opacity: 0;
+
+	    .label {
+	    	position: absolute;
+		    top: 0;
+		    right: 3px;
+		    line-height: 20px;
+		    color: white;
+	    }
+
+	    i {
+    	    font-size: 75%;
+	    }
+	}
+
+	.content {
+		position: relative;
+	}
+
+	.content:hover {
+
+		a {
+			color: $link-hover-color;
+	   		transition: all ease-out 0.5s;
+		}
+
+		.see-more-link {
+			border-bottom: 1px solid $link-hover-color;
+		}
+
+		.corner {
+			opacity: 1;
+	   		transition: opacity ease-in-out 0.8s;
+		}
+	}
+
+    .image {
+	    text-align: right;
+		margin: auto;
+
+  		img {
+  			max-height: 250px;
+  		}
+
+    }
+
+    .caption {
+		padding-left: 10px;
+	    padding-right: 25px;
+    }
+
+	.title {
+
+	}
+
+	.authors {
+		font-size: 80%;
+		font-weight: normal;
+	}
+
+	.publication-date {
+
+	}
+
+	.description {
+		font-size: 80%;
+	    margin: 10px 0 15px;
+	}
+
+}
+
+.featured-content {
+
+	.thumbnail-book {
+	    margin: auto;
+	    //max-width: 286px;
+
+		.image {
+			margin: auto;
+
+			img {
+				max-width: 230px;
+				max-height: none;
+			}
+		}
+
+	}
+}
+
+#book {
+	padding: 0;
+
+	.title {
+	    font-size: 24px;
+        line-height: 1.5em;
+	}
+
+	.authors {
+	    font-size: 15px;
+	    //color: #727272;
+	    font-weight: normal;
+	   	font-family: "Noto Sans", sans-serif;
+	}
+
+	.read-link {
+		position: absolute;
+	    top: 20px;
+    	right: 20px;
+        padding: 7px 9px 1px;
+	    border: 1px solid;
+	    border-radius: 20px 0 20px 20px;
+	    transition: all ease 0.5s;
+
+	    i {
+	    	font-size: 20px;
+	    }
+
+	    &:hover {
+	    	background: $link-hover-color;
+	    	border-radius: 20px;
+
+	    	i {
+	    		color: white;
+	    	}
+	    }
+	}
+
+	.description {
+		width: 100%;
+		font-size: 75%;
+	    line-height: 1.8em;
+	    margin: 20px 0 10px;
+
+	    p {
+    	    margin-bottom: 1em;
+	        text-align: justify;
+	    }
+	}
+
+	.cover {
+		width: 30%;
+		float: left;
+		margin: 0 20px 5px 0;
+	}
+
+	.content {
+		position: relative;
+		padding: 30px;
+	}
+
+	.infos {
+		//text-align: right;
+	}
+
+	.button-buy {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	.book-footer {
+		padding: 20px 30px;
+		background: $thumbnail-footer-bg-color;
+		color: $text-color-light;
+		font-size: 75%;
+
+		a {
+			margin: 0 5px;
+		}
+
+		.tag {
+			float: right;
+			font-size: 90%;
+			text-transform: lowercase;
+		}
+
+		.category {
+			float: left;
+
+			i {
+				position: relative;
+				top: 4px;
+				margin-right: 5px;
+				font-size: 16px;
+			}
+		}
+	}
+
+}
+

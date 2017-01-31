@@ -1,0 +1,33 @@
+/*
+ Theme Name:   Twenty Fifteen Child
+ Theme URI:    
+ Description:  Twenty Fifteen Child Theme
+ Author:       Audrey Guénée
+ Author URI:   http://audreyguenee.com
+ Template:     twentyfifteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentyfifteen-child
+*/
+
+//@import "compass";
+
+// Import Bootstrap Compass integration
+//@import "bootstrap-compass";
+// Import custom Bootstrap variables
+//@import "global/bootstrap-variables";
+// Import Bootstrap for Sass
+//@import "bootstrap";
+
+@import "bootstrap/grid12";
+
+@import "global/mixins";
+@import "global/variables";
+@import "global/typography";
+@import "global/common";
+
+@import "layout/taxonomy";
+@import "layout/book";
+@import "layout/reportage";

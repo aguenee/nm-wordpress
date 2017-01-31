@@ -1,15 +1,26 @@
 <?php
 
-function my_theme_enqueue_styles() {
+// Global
+global $locale;
 
-    $parent_style = 'twentyfifteen-style';
+/* ID pages (fr_FR) */
+const PAGE_STORIES_ID      = 2;
+const PAGE_BOOKS_ID        = 7;
+const PAGE_REPORTAGES_ID   = 10;
+const PAGE_NEWS_ID         = 13;
+const PAGE_ABOUT_ID        = 16;
 
-    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style ),
-        wp_get_theme()->get('Version')
-    );
-}
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+/* Pagination */
+const POSTS_PER_PAGE = 3;
+
+// Includes
+/* Custom Post Types */
+require 'inc/custom-post-types.php';
+/* Languages */
+require 'inc/languages.php';
+/* Scripts */
+require 'inc/scripts.php';
+/* Utils */
+require 'inc/utils.php';
+
 

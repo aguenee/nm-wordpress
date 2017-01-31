@@ -10,6 +10,8 @@ composer.lock
 /src/wp-content/uploads/
 /src/wp-content/plugins/
 /src/wp-content/upgrade/
+/src/wp-content/themes/*/.sass-cache
+/src/wp-content/themes/*/node_modules
 
 # Traduction
 *.pot~
