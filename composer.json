@@ -18,15 +18,14 @@
         }
     ],
     "require": {
-        "wpackagist-plugin/advanced-custom-fields": "4.4.11",
-        "wpackagist-plugin/cookie-notice": "1.2.37",
-        "wpackagist-plugin/loco-translate": "2.0.10",
-        "wpackagist-plugin/polylang": "2.0.11",
-        "wpackagist-plugin/wordpress-seo": "4.0",
-        "wpackagist-plugin/google-analytics-dashboard-for-wp": "4.9.5"
+        "wpackagist-plugin/advanced-custom-fields": "^4.4.11",
+        "wpackagist-plugin/cookie-notice": "^1.2.37",
+        "wpackagist-plugin/loco-translate": "^2.0.11",
+        "wpackagist-plugin/polylang": "^2.0.12",
+        "wpackagist-plugin/wordpress-seo": "^4.0",
+        "wpackagist-plugin/google-analytics-dashboard-for-wp": "^4.9.5"
     },
     "require-dev": {
-        "phing/phing": "2.*"
     },
     "extra": {
         "installer-paths": {
