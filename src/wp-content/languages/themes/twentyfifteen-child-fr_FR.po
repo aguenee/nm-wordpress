@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: twentyfifteen-child\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-31 21:11+0000\n"
+"PO-Revision-Date: 2017-01-31 21:12+0000\n"
+"Last-Translator: admin <audreyguenee@free.fr>\n"
+"Language-Team: French (France)\n"
+"Language: fr-FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: inc/utils.php:63
+msgid "Page"
+msgstr "Page"
+
+#: inc/utils.php:63
+msgid "of"
+msgstr "sur"
+
+#. Name of the template
+#: tag.php:138 inc/custom-post-types.php:51
+msgid "Books"
+msgstr "Livres"
+
+#: page-books.php:71 single-book.php:71
+msgid "Publication"
+msgstr "Parution"
+
+#: page-books.php:75 single-book.php:75
+msgid "Editor"
+msgstr "Editeur"
+
+#: page-books.php:79 single-book.php:79
+msgid "Price"
+msgstr "Prix"
+
+#: page-books.php:84 page-books.php:87 single-book.php:161 tag.php:83
+#: tag.php:115 tag.php:176 tag.php:209 tag.php:241 tag.php:273 tag.php:319
+msgid "See more"
+msgstr "En savoir +"
+
+#: single-book.php:45 inc/custom-post-types.php:52
+msgid "Book"
+msgstr "Livre"
+
+#: single-book.php:46
+msgid "Press"
+msgstr "Presse"
+
+#: single-book.php:47
+msgid "Videos"
+msgstr "Vidéos"
+
+#: single-book.php:56 single-book.php:58
+msgid "Read +"
+msgstr "Lire +"
+
+#: single-book.php:84
+msgid "Buy"
+msgstr "Acheter"
+
+#: single-book.php:116
+msgid "Around the same theme"
+msgstr "Sur le même thème"
+
+#: tag.php:60 inc/custom-post-types.php:14
+msgid "Stories"
+msgstr "Histoires"
+
+#: tag.php:296 inc/custom-post-types.php:88
+msgid "Reportages"
+msgstr "Reportages"
+
+#: inc/custom-post-types.php:15
+msgid "Story"
+msgstr "Histoire"
+
+#: inc/custom-post-types.php:16
+msgid "All stories"
+msgstr "Toutes les histoires"
+
+#: inc/custom-post-types.php:17 inc/custom-post-types.php:54
+#: inc/custom-post-types.php:91
+msgid "View"
+msgstr "Voir"
+
+#: inc/custom-post-types.php:18
+msgid "Add a story"
+msgstr "Ajouter une histoire"
+
+#: inc/custom-post-types.php:19 inc/custom-post-types.php:56
+#: inc/custom-post-types.php:93
+msgid "Add"
+msgstr "Ajouter"
+
+#: inc/custom-post-types.php:20 inc/custom-post-types.php:57
+#: inc/custom-post-types.php:94
+msgid "Edit"
+msgstr "Editer"
+
+#: inc/custom-post-types.php:21 inc/custom-post-types.php:58
+#: inc/custom-post-types.php:95
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: inc/custom-post-types.php:22 inc/custom-post-types.php:59
+#: inc/custom-post-types.php:96
+msgid "Search"
+msgstr "Rechercher"
+
+#: inc/custom-post-types.php:23 inc/custom-post-types.php:60
+#: inc/custom-post-types.php:97
+msgid "Not found"
+msgstr "Introuvable"
+
+#: inc/custom-post-types.php:24 inc/custom-post-types.php:61
+#: inc/custom-post-types.php:98
+msgid "Not found in trash"
+msgstr "Introuvable dans la corbeille"
+
+#: inc/custom-post-types.php:53
+msgid "All books"
+msgstr "Tous les livres"
+
+#: inc/custom-post-types.php:55
+msgid "Add a book"
+msgstr "Ajouter un livre"
+
+#: inc/custom-post-types.php:89
+msgid "Reportage"
+msgstr "Reportage"
+
+#: inc/custom-post-types.php:90
+msgid "All reportages"
+msgstr "Tous les reportages"
+
+#: inc/custom-post-types.php:92
+msgid "Add a reportage"
+msgstr "Ajouter un reportage"
+
+#. Author of the theme
+msgid "Anonyme"
+msgstr "Anonyme"
