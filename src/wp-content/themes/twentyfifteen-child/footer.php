@@ -36,6 +36,11 @@
 	    $('.grid').masonry({
 	        itemSelector: '.grid-item'
 	    });
+
+	    // Sorting
+    	$('form.sorting > select').change(function() {
+			$('form.sorting').submit();
+		});
 	});
 </script>
 

@@ -6,12 +6,18 @@
 get_header();
 
 
+// Get sort parameter
+$sortby = $_GET['sortby'] ? $_GET['sortby'] : 'date_desc';
+$sortInfos = explode( '_', $sortby );
+$orderby = $sortInfos[0] == 'date' ? 'meta_value' : $sortInfos[0];
+$order = $sortInfos[1];
+
 // Get books (5 per page)
 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 $books = new WP_Query( array(
 	'meta_key'		 => 'book_publication_date',
-	'orderby'		 => 'meta_value',
-	'order'          => 'DESC',
+	'orderby'		 => $orderby,
+	'order'          => $order,
 	'posts_per_page' => POSTS_PER_PAGE,
 	'paged' 		 => $paged,
 	'post_type' 	 => 'book',
@@ -23,6 +29,28 @@ $books = new WP_Query( array(
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main container" role="main">
+
+		<section class="row">
+			<div class="col-sm-12 col-md-12">
+				<form class="sorting" action="" method="GET">
+					<label for="sortby"><?php echo __( 'Sort by:', 'twentyfifteen-child' ); ?></label>
+					<select id="sortby" name="sortby">
+						<option value="date_desc" <?php echo $sortby == 'date_desc' ? 'selected' : ''; ?>>
+							<?php echo __( 'Date: descending', 'twentyfifteen-child' ); ?>
+						</option>
+						<option value="date_asc" <?php echo $sortby == 'date_asc' ? 'selected' : ''; ?>>
+							<?php echo __( 'Date: ascending', 'twentyfifteen-child' ); ?>
+						</option>
+						<option value="title_asc" <?php echo $sortby == 'title_asc' ? 'selected' : ''; ?>>
+							<?php echo __( 'Title: A->Z', 'twentyfifteen-child' ); ?>
+						</option>
+						<option value="title_desc" <?php echo $sortby == 'title_desc' ? 'selected' : ''; ?>>
+							<?php echo __( 'Title: Z->A', 'twentyfifteen-child' ); ?>
+						</option>
+					</select>
+				</form>
+			</div>
+		</section>
 
 	<?php if ( $books->have_posts() ) : ?>
 		<?php while ( $books->have_posts() ) :

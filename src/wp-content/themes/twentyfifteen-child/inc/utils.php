@@ -40,7 +40,7 @@ function custom_pagination( $numpages = '', $pagerange = '', $paged = '' ) {
 	 * function. 
 	 */
 	$pagination_args = array(
-		'base'			=> get_pagenum_link(1) . '%_%',
+		//'base'			=> get_pagenum_link(1) . '%_%',
 		'format'		=> 'page/%#%',
 		'total'			=> $numpages,
 		'current'		=> $paged,
@@ -61,7 +61,7 @@ function custom_pagination( $numpages = '', $pagerange = '', $paged = '' ) {
 		echo "<nav class='custom-pagination'>";
 			echo $paginate_links;
 			echo "<span class='page-numbers page-num'>" .
-				__( 'Page', 'twentyfifteen-child' ) . " " . $paged . " " . __( 'of', 'twentyfifteen-child' ) . "  " . $numpages . 
+				__( 'Page', 'twentyfifteen-child' ) . " " . $paged . " " . __( 'of', 'twentyfifteen-child' ) . " " . $numpages . 
 				"</span>";
 		echo "</nav>";
   	}
