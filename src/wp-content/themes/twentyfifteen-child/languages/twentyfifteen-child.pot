@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 21:11+0000\n"
+"POT-Creation-Date: 2017-02-01 20:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -19,19 +19,39 @@ msgstr ""
 msgid "Books"
 msgstr ""
 
-#: page-books.php:71 single-book.php:71
+#: page-books.php:36
+msgid "Sort by:"
+msgstr ""
+
+#: page-books.php:39
+msgid "Date: descending"
+msgstr ""
+
+#: page-books.php:42
+msgid "Date: ascending"
+msgstr ""
+
+#: page-books.php:45
+msgid "Title: A->Z"
+msgstr ""
+
+#: page-books.php:48
+msgid "Title: Z->A"
+msgstr ""
+
+#: page-books.php:99 single-book.php:71
 msgid "Publication"
 msgstr ""
 
-#: page-books.php:75 single-book.php:75
+#: page-books.php:103 single-book.php:75
 msgid "Editor"
 msgstr ""
 
-#: page-books.php:79 single-book.php:79
+#: page-books.php:107 single-book.php:79
 msgid "Price"
 msgstr ""
 
-#: page-books.php:84 page-books.php:87 single-book.php:161 tag.php:83
+#: page-books.php:112 page-books.php:115 single-book.php:161 tag.php:83
 #: tag.php:115 tag.php:176 tag.php:209 tag.php:241 tag.php:273 tag.php:319
 msgid "See more"
 msgstr ""
@@ -135,11 +155,11 @@ msgstr ""
 msgid "Add a reportage"
 msgstr ""
 
-#: inc/utils.php:63
+#: inc/utils.php:64
 msgid "Page"
 msgstr ""
 
-#: inc/utils.php:63
+#: inc/utils.php:64
 msgid "of"
 msgstr ""
 

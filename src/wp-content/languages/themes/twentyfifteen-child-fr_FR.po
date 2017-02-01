@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twentyfifteen-child\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-31 21:11+0000\n"
-"PO-Revision-Date: 2017-01-31 21:12+0000\n"
+"POT-Creation-Date: 2017-02-01 20:32+0000\n"
+"PO-Revision-Date: 2017-02-01 20:34+0000\n"
 "Last-Translator: admin <audreyguenee@free.fr>\n"
 "Language-Team: French (France)\n"
 "Language: fr-FR\n"
@@ -13,32 +13,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: inc/utils.php:63
-msgid "Page"
-msgstr "Page"
+#: page-books.php:36
+msgid "Sort by:"
+msgstr "Trier par :"
 
-#: inc/utils.php:63
-msgid "of"
-msgstr "sur"
+#: page-books.php:39
+msgid "Date: descending"
+msgstr "Date : ordre décroissant"
+
+#: page-books.php:42
+msgid "Date: ascending"
+msgstr "Date : ordre croissant"
+
+#: page-books.php:45
+msgid "Title: A->Z"
+msgstr "Titre : A->Z"
+
+#: page-books.php:48
+msgid "Title: Z->A"
+msgstr "Titre : Z->A"
 
 #. Name of the template
 #: tag.php:138 inc/custom-post-types.php:51
 msgid "Books"
 msgstr "Livres"
 
-#: page-books.php:71 single-book.php:71
+#: page-books.php:99 single-book.php:71
 msgid "Publication"
 msgstr "Parution"
 
-#: page-books.php:75 single-book.php:75
+#: page-books.php:103 single-book.php:75
 msgid "Editor"
 msgstr "Editeur"
 
-#: page-books.php:79 single-book.php:79
+#: page-books.php:107 single-book.php:79
 msgid "Price"
 msgstr "Prix"
 
-#: page-books.php:84 page-books.php:87 single-book.php:161 tag.php:83
+#: page-books.php:112 page-books.php:115 single-book.php:161 tag.php:83
 #: tag.php:115 tag.php:176 tag.php:209 tag.php:241 tag.php:273 tag.php:319
 msgid "See more"
 msgstr "En savoir +"
@@ -141,6 +153,14 @@ msgstr "Tous les reportages"
 #: inc/custom-post-types.php:92
 msgid "Add a reportage"
 msgstr "Ajouter un reportage"
+
+#: inc/utils.php:64
+msgid "Page"
+msgstr "Page"
+
+#: inc/utils.php:64
+msgid "of"
+msgstr "sur"
 
 #. Author of the theme
 msgid "Anonyme"
