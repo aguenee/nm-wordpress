@@ -31,6 +31,11 @@ $books = new WP_Query( array(
 	<main id="main" class="site-main container" role="main">
 
 		<section class="row">
+			<!--<div class="col-sm-6 col-md-6">
+				<div class="breadcrumb">
+					<h3><?php echo __( 'Books', 'twentyfifteen-child' ); ?></h3>
+				</div>
+			</div>-->
 			<div class="col-sm-12 col-md-12">
 				<form class="sorting" action="" method="GET">
 					<label for="sortby"><?php echo __( 'Sort by:', 'twentyfifteen-child' ); ?></label>

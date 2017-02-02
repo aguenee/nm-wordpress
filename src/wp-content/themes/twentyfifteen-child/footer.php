@@ -41,6 +41,17 @@
     	$('form.sorting > select').change(function() {
 			$('form.sorting').submit();
 		});
+
+	    // Section "accordion style"
+		$('.section-title').click(function() {
+		    var section = $(this).parent();
+
+		    if ( section.hasClass('section-disabled') ) {
+		        return;
+		    }
+
+		    $(this).parent().toggleClass('section-open');
+		});
 	});
 </script>
 

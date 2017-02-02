@@ -4,28 +4,15 @@
 		text-transform: lowercase;
 		color: $link-hover-color;
 		font-family: "Noto Sans", sans-serif;
-		font-size: 30px;
-		font-weight: normal;
-		margin: 0 0 10px;
-	}
-
-	h2 {
-		font-family: "Noto Sans", sans-serif;
 		font-size: 24px;
 		font-weight: normal;
-		margin: 0 0 15px;
-	}
-
-	#books {
-		//margin: 20px 0;
+		margin: 0 0 30px;
 	}
 
 	.thumbnail-book {
 		margin: 0 0 30px;
-		//text-align: center;
 
 		.content {
-			//height: 375px;
 		    padding: 25px 25px 20px;
 		}
 
@@ -44,10 +31,6 @@
 			line-height: 18px;
 		}
 
-		/*.publication-date {
-		    font-size: 60%;
-		}*/
-
 		.footer {
 			padding: 10px 25px;
 
@@ -58,7 +41,6 @@
 
 			.category {
 			    font-size: 90%;
-			    //margin-right: 10px;
 
 			    i {
 			    	font-size: 12px;
@@ -66,10 +48,6 @@
     				margin-right: 4px;
 			    }
 			}
-			/*.category,
-			.tag {
-				float: none;
-			}*/
 		}
 	}
 

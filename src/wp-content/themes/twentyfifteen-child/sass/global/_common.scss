@@ -160,6 +160,93 @@
 	}
 }
 
+// Section "accordion style"
+.section {
+
+	margin: 0;
+
+	&.section-open {
+		margin: 0 0 30px;
+
+		.section-title h4 {
+			color: #333;
+
+			.arrow-right {
+				opacity: 0;
+			}
+
+			.arrow-down {
+				opacity: 1;
+			}
+		}
+
+		.section-content {
+			display: block;
+		}
+	}
+
+	&.section-disabled {
+		margin: 0;
+
+		.section-title h4 {
+			cursor: auto;
+
+			&:hover {
+				color: #929292;
+			}
+		}
+
+		.section-content {
+			display: none;
+		}
+	}
+}
+
+.section-title {
+
+	hr {
+	    margin: 5px 0 20px;
+	    border: 0;
+	    border-top: 1px solid #d4d4d4;
+	    border-bottom: 1px solid #fff;
+	}
+
+	h4 {
+		position: relative;
+		font-family: "Noto Sans", sans-serif;
+		//font-size: 22px;
+		font-weight: normal;
+		//margin: 0 0 20px;
+		//border-bottom: 1px dotted;
+		cursor: pointer;
+	    color: #929292;
+	    transition: color ease 0.3s;
+
+	    &:hover {
+	    	color: #333;
+	    }
+
+		i {
+			position: absolute;
+			top: 6px;
+			right: 0;
+			transition: opacity ease 0.3s;
+		}
+
+		.arrow-right {
+			opacity: 1;
+		}
+
+		.arrow-down {
+			opacity: 0;
+		}
+	}
+}
+
+.section-content {
+	display: none;
+}
+
 // Featured content
 .featured-content {
 	margin-top: 30px;
@@ -220,12 +307,23 @@
 	float: right;
 	font-family: "Noto Sans", sans-serif;
 	font-size: 14px;
-    margin: 0 0 30px;
+    margin: 0 0 35px;
 
 	select {
 		font-family: "Noto Sans", sans-serif;
 		font-size: 14px;
 		cursor: pointer;
+	}
+}
+
+// Breadcrumb
+.breadcrumb {
+	color: $link-hover-color;
+	font-family: "Noto Sans", sans-serif;
+	margin: 0 0 35px;
+
+	h3, h4 {
+    	font-weight: normal;
 	}
 }
 
@@ -319,6 +417,11 @@
 	.widget {
 		margin: 0 0 20%;
     	padding: 0 10%;
+	}
+
+	.site-main {
+		padding-top: 5%;
+		padding-bottom: 5%;
 	}
 
 	.site-content {
