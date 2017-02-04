@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 20:32+0000\n"
+"POT-Creation-Date: 2017-02-04 16:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,46 +14,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
+#: category.php:58 tag.php:58 inc/custom-post-types.php:14
+msgid "Stories"
+msgstr ""
+
 #. Name of the template
-#: tag.php:138 inc/custom-post-types.php:51
+#: category.php:78 page-books.php:36 tag.php:78 inc/custom-post-types.php:51
 msgid "Books"
 msgstr ""
 
-#: page-books.php:36
-msgid "Sort by:"
+#: category.php:118 category.php:151 category.php:183 category.php:215
+#: page-books.php:113 page-books.php:116 single-book.php:162 tag.php:117
+#: tag.php:150 tag.php:182 tag.php:214
+msgid "See more"
 msgstr ""
 
-#: page-books.php:39
+#: category.php:237 tag.php:236 inc/custom-post-types.php:88
+msgid "Reportages"
+msgstr ""
+
+#: page-books.php:41
+msgid "Sort by"
+msgstr ""
+
+#: page-books.php:44
 msgid "Date: descending"
 msgstr ""
 
-#: page-books.php:42
+#: page-books.php:47
 msgid "Date: ascending"
 msgstr ""
 
-#: page-books.php:45
+#: page-books.php:50
 msgid "Title: A->Z"
 msgstr ""
 
-#: page-books.php:48
+#: page-books.php:53
 msgid "Title: Z->A"
 msgstr ""
 
-#: page-books.php:99 single-book.php:71
+#: page-books.php:100 single-book.php:71
 msgid "Publication"
 msgstr ""
 
-#: page-books.php:103 single-book.php:75
+#: page-books.php:104 single-book.php:75
 msgid "Editor"
 msgstr ""
 
-#: page-books.php:107 single-book.php:79
+#: page-books.php:108 single-book.php:79
 msgid "Price"
-msgstr ""
-
-#: page-books.php:112 page-books.php:115 single-book.php:161 tag.php:83
-#: tag.php:115 tag.php:176 tag.php:209 tag.php:241 tag.php:273 tag.php:319
-msgid "See more"
 msgstr ""
 
 #: single-book.php:45 inc/custom-post-types.php:52
@@ -78,14 +87,6 @@ msgstr ""
 
 #: single-book.php:116
 msgid "Around the same theme"
-msgstr ""
-
-#: tag.php:60 inc/custom-post-types.php:14
-msgid "Stories"
-msgstr ""
-
-#: tag.php:296 inc/custom-post-types.php:88
-msgid "Reportages"
 msgstr ""
 
 #: inc/custom-post-types.php:15
