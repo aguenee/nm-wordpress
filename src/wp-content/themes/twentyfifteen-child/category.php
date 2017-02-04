@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all posts sharing same taxonomy term
+ * The template for displaying all posts sharing same category
  */
 
 get_header(); 
@@ -15,7 +15,7 @@ $stories = new WP_Query( array(
         'posts_per_page' => -1,
         'post_type'      => array( 'story' ),
         'post_status'    => 'publish',
-        'tag'            => $term->slug
+        'category_name'  => $term->slug
     )
 );
 
@@ -25,7 +25,7 @@ $books = new WP_Query( array(
         'posts_per_page' => -1,
         'post_type'      => array( 'book' ),
         'post_status'    => 'publish',
-        'tag'            => $term->slug
+        'category_name'  => $term->slug
     )
 );
 
@@ -35,7 +35,7 @@ $reportages = new WP_Query( array(
         'posts_per_page' => -1,
         'post_type'      => array( 'reportage' ),
         'post_status'    => 'publish',
-        'tag'            => $term->slug
+        'category_name'  => $term->slug
     )
 );
 
@@ -46,7 +46,7 @@ $reportages = new WP_Query( array(
 
         <div class="row">
             <div class="col-sm-12 col-md-12">
-                <h2 class="tag-title">#<?php echo $term->name; ?></h2>
+                <h2 class="category-title"><i class="material-icons">local_offer</i><?php echo $term->name; ?></h2>
             </div>
         </div>
 
@@ -98,6 +98,7 @@ $reportages = new WP_Query( array(
                     // Categories
                     $categories = get_post_categories( $post );
                 ?>
+
                     <div class="col-sm-4 col-md-4 grid-item">
                         <article class="thumbnail thumbnail-book">
                             <div class="content">
