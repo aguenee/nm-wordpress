@@ -1,3 +1,4 @@
+// Thumbnail
 .thumbnail-book {
 
 	small {
@@ -29,7 +30,7 @@
 
 	.content:hover {
 
-		a {
+		.title {
 			color: $link-hover-color;
 	   		transition: all ease-out 0.5s;
 		}
@@ -79,24 +80,59 @@
 
 }
 
+// Featured content
 .featured-content {
 
 	.thumbnail-book {
-	    margin: auto;
-	    //max-width: 286px;
+		margin: 0 auto 30px;
+
+		.content {
+		    padding: 25px 25px 20px;
+		}
 
 		.image {
-			margin: auto;
+			margin: 0 auto 20px;
+			padding: 0 20px;
 
 			img {
-				max-width: 230px;
-				max-height: none;
+				max-width: 100%;
+    			max-height: 250px;
 			}
 		}
 
+		.title {
+		    font-size: 75%;
+    		line-height: 20px;
+    		margin-bottom: 6px;
+		}
+
+		.authors {
+			font-size: 70%;
+			line-height: 18px;
+		}
+
+		.footer {
+			padding: 10px 25px;
+
+			a {
+				float: none;
+				margin: 0;
+			}
+
+			.category {
+			    font-size: 90%;
+
+			    i {
+			    	font-size: 12px;
+			    	top: 2px;
+    				margin-right: 4px;
+			    }
+			}
+		}
 	}
 }
 
+// Single book
 #book {
 	padding: 0;
 

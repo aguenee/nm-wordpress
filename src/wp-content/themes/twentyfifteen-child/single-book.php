@@ -115,55 +115,67 @@ while ( have_posts() ) : the_post();
 					<div class="header col-sm-12 col-md-12">
 						<h3><?php echo __( 'Around the same theme', 'twentyfifteen-child' ); ?></h3>
 					</div>
-				</div>
+				
+					<?php $containerSize = count( $featuredBooks ) * 4; ?>
+					<!-- 4 pour 1, 8 pour 2, 12 pour 3 -->
+					<div class="items <?php echo 'col-sm-' . $containerSize . ' col-md-' . $containerSize; ?>">
+						<div class="row">
+						<?php $colSize = 12 / count( $featuredBooks ); ?>
 
-				<div class="row">
-					<?php $colSize = 12 / count( $featuredBooks ); ?>
-					<?php foreach ( $featuredBooks as $featuredBook ) :
-							// Post
-							//$book = get_post( $books->the_post() );
-							// Cover
-							$coverImage = get_field( 'book_cover_image', $featuredBook );
-							// Authors
-							$authors = get_field( 'book_authors', $featuredBook, false );
-							// Publication date
-							//$publicationDate = new DateTime( get_field( 'book_publication_date', $book, false ) );
-							// Editor
-							//$editor = get_field( 'book_editor', $book, false );
-							// Price
-							//$price = get_field( 'book_price', $book, false );
-							// Description
-				        	//$description = wp_strip_all_tags( get_post_field( 'post_content', $book ) );
-				        	//$description = strlen( $description ) > 300 ? mb_substr( $description, 0, 300 ) . '...' : $description;
-				        	// Tags
-				        	//$tags = wp_get_post_tags( $book->ID );
-				    		// Categories
-							//$categories = get_post_categories( $post );
-
-					?>
-						<div class="<?php echo 'col-sm-' . $colSize . ' col-md-' . $colSize; ?>">
-							<article class="thumbnail thumbnail-book">
-								<div class="content">
-									<div class="corner">
-										<a href="#" class="triangle triangle-top-right"></a>
-										<span class="label"><i class="material-icons">add</i></span>
-									</div>
-									<a class="image clearfix" href="<?php echo get_permalink( $featuredBook ); ?>">
-										<?php if ( $coverImage ): ?>
-											<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $book->post_title; ?>" />
-										<?php else: ?>
-							                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/book-cover.jpg" alt="<?php echo $book->post_title; ?>" />
-										<?php endif; ?>
-									</a>
-									<h3 class="title">
-										<a href="<?php echo get_permalink( $featuredBook ); ?>"><?php echo $featuredBook->post_title; ?></a>
-									</h3>
-									<a class="see-more-link-area" href="<?php echo get_permalink( $featuredBook ); ?>" title="<?php echo __( 'See more', 'twentyfifteen-child' ); ?>"></a>
-								</div>
-								<?php //var_dump( $featuredBook ); ?>
-							</article>
+						<?php foreach ( $featuredBooks as $featuredBook ) :
+								// Post
+								//$book = get_post( $books->the_post() );
+								// Cover
+								$coverImage = get_field( 'book_cover_image', $featuredBook );
+								// Authors
+								$authors = get_field( 'book_authors', $featuredBook, false );
+								// Publication date
+								//$publicationDate = new DateTime( get_field( 'book_publication_date', $book, false ) );
+								// Editor
+								//$editor = get_field( 'book_editor', $book, false );
+								// Price
+								//$price = get_field( 'book_price', $book, false );
+								// Description
+					        	//$description = wp_strip_all_tags( get_post_field( 'post_content', $book ) );
+					        	//$description = strlen( $description ) > 300 ? mb_substr( $description, 0, 300 ) . '...' : $description;
+					        	// Tags
+					        	$tags = wp_get_post_tags( $featuredBook->ID );
+					    		// Categories
+								$categories = get_post_categories( $featuredBook );
+						?>
+							<div class="<?php echo 'col-sm-' . $colSize . ' col-md-' . $colSize; ?>">
+								<article class="thumbnail thumbnail-book">
+									<div class="content">
+		                                <div class="corner">
+		                                    <a href="#" class="triangle triangle-top-right"></a>
+		                                    <span class="label"><i class="material-icons">add</i></span>
+		                                </div>
+		                                <div class="image clearfix">
+		                                    <?php if ( $coverImage ): ?>
+		                                        <img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $featuredBook->post_title; ?>" />
+		                                    <?php else: ?>
+		                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/book-cover.jpg" alt="<?php echo $featuredBook->post_title; ?>" />
+		                                    <?php endif; ?>
+		                                </div>
+		                                <h3 class="title"><?php echo $featuredBook->post_title; ?></h3>
+		                                <h3 class="authors"><?php echo $authors; ?></h3>
+		                                <a class="see-more-link-area" href="<?php echo get_permalink( $featuredBook ); ?>" title="<?php echo __( 'See more', 'twentyfifteen-child' ); ?>"></a>
+		                            </div>
+		                            <div class="footer">
+		                                <?php foreach ( $categories as $index => $category ) : ?>
+		                                    <a href="<?php echo get_category_link( $category ); ?>" class="category">
+		                                        <i class="material-icons">local_offer</i><?php echo $category->name; ?>
+		                                    </a>&nbsp;
+		                                <?php endforeach; ?>
+		                                <?php foreach ( $tags as $index => $tag ) : ?>
+		                                    <a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
+		                                <?php endforeach; ?>
+		                            </div>
+								</article>
+							</div>
+						<?php endforeach; ?>
 						</div>
-					<?php endforeach; ?>
+					</div>
 				</div>
 			</section>
 		<?php endif; ?>

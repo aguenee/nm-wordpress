@@ -87,18 +87,14 @@ $books = new WP_Query( array(
 						<span class="label"><i class="material-icons">add</i></span>
 					</div>
 					<div class="col-sm-3 col-md-3 image">
-						<a href="<?php echo get_permalink( $book ); ?>">
-							<?php if ( $coverImage ): ?>
-								<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $book->post_title; ?>" />
-							<?php else: ?>
-				                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/book-cover.jpg" alt="<?php echo $book->post_title; ?>" />
-							<?php endif; ?>
-						</a>
+						<?php if ( $coverImage ): ?>
+							<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $book->post_title; ?>" />
+						<?php else: ?>
+			                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/book-cover.jpg" alt="<?php echo $book->post_title; ?>" />
+						<?php endif; ?>
 					</div>
 					<div class="col-sm-9 col-md-9 caption">
-						<h2 class="title">
-							<a href="<?php echo get_permalink( $book ); ?>"><?php echo $book->post_title; ?></a>
-						</h2>
+						<h2 class="title"><?php echo $book->post_title; ?></a></h2>
 						<h3 class="authors"><?php echo $authors; ?></h3>
 						<small class="publication-date">
 							<strong><?php echo __( 'Publication', 'twentyfifteen-child' ); ?> :</strong> <?php echo $publicationDate->format('d/m/Y'); ?>

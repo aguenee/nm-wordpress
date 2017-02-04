@@ -72,10 +72,10 @@ function custom_pagination( $numpages = '', $pagerange = '', $paged = '' ) {
  * @param int|WP_Post $post
  * @param array $terms
  * @param bool $random (optional, default false)
- * @param int $nbPosts (optional, default null)
+ * @param int $nbPosts (optional, default 2)
  * @return array
  */
-function get_featured_posts( $post, $terms, $random = false, $nbPosts = null ) {
+function get_featured_posts( $post, $terms, $random = false, $nbPosts = 2 ) {
 	$otherPosts = get_posts( array(
         'posts_per_page'   => -1,
         'offset'           => 0,
@@ -85,8 +85,9 @@ function get_featured_posts( $post, $terms, $random = false, $nbPosts = null ) {
 	) );
 	
 	$featuredPosts = array();
+
 	foreach ( $otherPosts as $otherPost ) {
-		$otherPostCategories = wp_get_post_categories( $otherPost );
+		$otherPostCategories = wp_get_post_categories( $otherPost->ID );
 		$otherPostTags = wp_get_post_terms( $otherPost->ID, 'post_tag', array( 'fields' => 'ids' ) );
 
 		if ( !empty( array_intersect( $terms['categories'], $otherPostCategories ) ) ||			
@@ -96,12 +97,13 @@ function get_featured_posts( $post, $terms, $random = false, $nbPosts = null ) {
 		}
 	}
 
-	if ( $random && $nbPosts && $nbPosts < count( $featuredPosts ) ) {
+	if ( $random && $nbPosts < count( $featuredPosts ) ) {
 		$randomFeaturedPosts = array();
 		$randomIndexes = array_rand( $featuredPosts, $nbPosts );
 		foreach ( $randomIndexes as $randomIndex ) {
 			$randomFeaturedPosts[] = $featuredPosts[$randomIndex];
 		}
+		
 		return $randomFeaturedPosts;				
 	}
 
