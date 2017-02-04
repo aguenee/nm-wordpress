@@ -38,7 +38,8 @@ $books = new WP_Query( array(
 			</div>-->
 			<div class="col-sm-12 col-md-12">
 				<form class="sorting" action="" method="GET">
-					<label for="sortby"><?php echo __( 'Sort by:', 'twentyfifteen-child' ); ?></label>
+					<img class="loader hidden" src="<?php echo get_stylesheet_directory_uri(); ?>/img/loader.gif ?>" alt="" />
+					<label for="sortby"><?php echo __( 'Sort by', 'twentyfifteen-child' ); ?>&nbsp;</label>
 					<select id="sortby" name="sortby">
 						<option value="date_desc" <?php echo $sortby == 'date_desc' ? 'selected' : ''; ?>>
 							<?php echo __( 'Date: descending', 'twentyfifteen-child' ); ?>

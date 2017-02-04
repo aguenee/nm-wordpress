@@ -37,6 +37,11 @@
 	        itemSelector: '.grid-item'
 	    });
 
+	    // Loader
+	    $('select').change(function() {
+	    	$('.loader').removeClass('hidden');
+	    });
+
 	    // Sorting
     	$('form.sorting > select').change(function() {
 			$('form.sorting').submit();
