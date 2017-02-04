@@ -41,7 +41,7 @@ $reportages = new WP_Query( array(
 
 ?>
 
-<div id="primary" class="content-area featured-content">
+<div id="primary" class="content-area">
     <main id="main" class="site-main container" role="main">
 
         <div class="row">
@@ -51,7 +51,7 @@ $reportages = new WP_Query( array(
         </div>
 
         <!-- Stories -->
-        <section id="stories" class="section <?php echo $stories->have_posts() ? 'section-open' : 'section-disabled'; ?>">
+        <section id="stories" class="featured-content section <?php echo $stories->have_posts() ? 'section-open' : 'section-disabled'; ?>">
             <div class="row section-title">
                 <div class="col-sm-12 col-md-12">
                     <h4>
@@ -71,7 +71,7 @@ $reportages = new WP_Query( array(
         </section>
 
         <!-- Books -->
-        <section id="books" class="section <?php echo $books->have_posts() ? 'section-open' : 'section-disabled'; ?>">
+        <section id="books" class="featured-content section <?php echo $books->have_posts() ? 'section-open' : 'section-disabled'; ?>">
             <div class="row section-title">
                 <div class="col-sm-12 col-md-12">
                     <h4>
@@ -230,7 +230,7 @@ $reportages = new WP_Query( array(
         </section>
 
         <!-- Reportages -->
-        <section id="reportages" class="section <?php echo $reportages->have_posts() ? 'section-open' : 'section-disabled'; ?>">
+        <section id="reportages" class="featured-content section <?php echo $reportages->have_posts() ? 'section-open' : 'section-disabled'; ?>">
             <div class="row section-title">
                 <div class="col-sm-12 col-md-12">
                     <h4>

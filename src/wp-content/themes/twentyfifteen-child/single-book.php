@@ -40,74 +40,76 @@ while ( have_posts() ) : the_post();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main container" role="main">
 
-		<section id="tabs-container" class="row">
-		    <ul class="tabs-menu">
-		        <li class="current"><a href="#book"><?php echo __( 'Book', 'twentyfifteen-child' ); ?></a></li>
-		        <li class="disabled"><a href="#press"><?php echo __( 'Press', 'twentyfifteen-child' ); ?></a></li>
-		        <li class="disabled"><a href="#videos"><?php echo __( 'Videos', 'twentyfifteen-child' ); ?></a></li>
-		    </ul>
-		    <div class="tab">
-		    	<!-- Book -->
-		        <article id="book" class="col-sm-12 col-md-12 tab-content">
-		        	<div class="content">
-			            <h2 class="title"><?php the_title(); ?></h2>
-			            <h3 class="authors"><?php echo $authors; ?></h3>
+		<div class="row">
+			<section id="tabs-container" class="col-sm-12 col-md-12">
+			    <ul class="tabs-menu">
+			        <li class="current"><a href="#book"><?php echo __( 'Book', 'twentyfifteen-child' ); ?></a></li>
+			        <li class="disabled"><a href="#press"><?php echo __( 'Press', 'twentyfifteen-child' ); ?></a></li>
+			        <li class="disabled"><a href="#videos"><?php echo __( 'Videos', 'twentyfifteen-child' ); ?></a></li>
+			    </ul>
+			    <div class="tab">
+			    	<!-- Book -->
+			        <article id="book" class="tab-content">
+			        	<div class="content">
+				            <h2 class="title"><?php the_title(); ?></h2>
+				            <h3 class="authors"><?php echo $authors; ?></h3>
 
-			            <a class="read-link" href="#" title="<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>">
-			            	<i class="material-icons">book</i>
-							<!--<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>-->
-							<!--<i class="material-icons">open_in_new</i>-->
-						</a>
+				            <a class="read-link" href="#" title="<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>">
+				            	<i class="material-icons">book</i>
+								<!--<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>-->
+								<!--<i class="material-icons">open_in_new</i>-->
+							</a>
 
-			            <div class="description clearfix">
-				            <?php if ( $coverImage ): ?>
-								<img class="cover" src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php the_title(); ?>" />
-							<?php endif; ?>
-				            <?php the_content(); ?>
-				        </div>
+				            <div class="description clearfix">
+					            <?php if ( $coverImage ): ?>
+									<img class="cover" src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php the_title(); ?>" />
+								<?php endif; ?>
+					            <?php the_content(); ?>
+					        </div>
 
-				        <div class="infos">
-				            <small class="publication-date">
-								<strong><?php echo __( 'Publication', 'twentyfifteen-child' ); ?> :</strong> <?php echo $publicationDate->format('d/m/Y'); ?>
-							</small>
-							&middot;
-							<small class="editor">
-								<strong><?php echo __( 'Editor', 'twentyfifteen-child' ); ?> :</strong> <?php echo $editor; ?>
-							</small>
-							&middot;
-							<small class="price">
-								<strong><?php echo __( 'Price', 'twentyfifteen-child' ); ?> :</strong> <?php echo $price; ?>&nbsp;€
-							</small>
+					        <div class="infos">
+					            <small class="publication-date">
+									<strong><?php echo __( 'Publication', 'twentyfifteen-child' ); ?> :</strong> <?php echo $publicationDate->format('d/m/Y'); ?>
+								</small>
+								&middot;
+								<small class="editor">
+									<strong><?php echo __( 'Editor', 'twentyfifteen-child' ); ?> :</strong> <?php echo $editor; ?>
+								</small>
+								&middot;
+								<small class="price">
+									<strong><?php echo __( 'Price', 'twentyfifteen-child' ); ?> :</strong> <?php echo $price; ?>&nbsp;€
+								</small>
+							</div>
+
+							<a class="button button-buy" href="<?php echo get_field( 'book_product_link' ); ?>" title="<?php echo $post->post_title ; ?>" target="_blank">
+								<?php echo __( 'Buy', 'twentyfifteen-child' ); ?>
+								<i class="material-icons">open_in_new</i>
+							</a>
 						</div>
+						<div class="book-footer">
+							<?php foreach ( $tags as $index => $tag ) : ?>
+								<a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
+							<?php endforeach; ?>
+							<?php foreach ( $categories as $index => $category ) : ?>
+								<a href="<?php echo get_category_link( $category ); ?>" class="category">
+									<i class="material-icons">local_offer</i><?php echo $category->name; ?>
+								</a>&nbsp;
+							<?php endforeach; ?>
+						</div>
+			        </article>
 
-						<a class="button button-buy" href="<?php echo get_field( 'book_product_link' ); ?>" title="<?php echo $post->post_title ; ?>" target="_blank">
-							<?php echo __( 'Buy', 'twentyfifteen-child' ); ?>
-							<i class="material-icons">open_in_new</i>
-						</a>
-					</div>
-					<div class="book-footer">
-						<?php foreach ( $tags as $index => $tag ) : ?>
-							<a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
-						<?php endforeach; ?>
-						<?php foreach ( $categories as $index => $category ) : ?>
-							<a href="<?php echo get_category_link( $category ); ?>" class="category">
-								<i class="material-icons">local_offer</i><?php echo $category->name; ?>
-							</a>&nbsp;
-						<?php endforeach; ?>
-					</div>
-		        </article>
+			        <!-- Press -->
+			        <article id="press" class="tab-content">
+			           <p></p>
+			        </article>
 
-		        <!-- Press -->
-		        <article id="press" class="col-sm-12 col-md-12 tab-content">
-		           <p></p>
-		        </article>
-
-		        <!-- Videos -->
-		        <article id="videos" class="col-sm-12 col-md-12 tab-content">
-		           <p></p>
-		        </article>
-		    </div>
-		</section>
+			        <!-- Videos -->
+			        <article id="videos" class="tab-content">
+			           <p></p>
+			        </article>
+			    </div>
+			</section>
+		</div>
 
 		<?php if ( !empty($featuredBooks) ) : ?>
 			<section class="featured-content">
