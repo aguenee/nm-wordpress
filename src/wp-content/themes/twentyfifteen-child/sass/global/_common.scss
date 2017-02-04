@@ -1,320 +1,24 @@
 /**
  * Common styles
+ *
+ * 1.0 - Common
+ *   1.1 - Generic
+ *	 1.2 - Extras
+ * 2.0 - Bootstrap grid custom
+ * 3.0 - Twentyfifteen custom
  */
 
+
+/**
+ * 1.0 - Common
+ */
+/**
+ * 1.1 - Generic
+ */
 .hidden {
  	display: none;
 }
 
-// Tabs
-.tabs-menu {
-    display: inline-block;
-    margin: 0;
-}
-
-.tabs-menu li {
-    display: inline-block;
-	height: 40px;
-    line-height: 40px;
-    letter-spacing: 0.15em;
-    margin-right: 10px;
-    background-color: $tab-inactive-bg-color;
-	list-style: none;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-    border-radius: 5px 5px 0 0;
-}
-
-.tabs-menu li.current {
-    position: relative;
-    background-color: $tab-active-bg-color;
-    z-index: 5;
-}
-
-.tabs-menu li.disabled {
-    opacity: 0.8;
-
-    a {
-    	cursor: default;
-    }
-}
-
-.tabs-menu li a {
-    padding: 10px 50px;
-    font-family: "Noto Sans", sans-serif;
-    font-size: 80%;
-    text-transform: uppercase;
-    color: $tab-inactive-color;
-}
-
-.tabs-menu .current a {
-    color: $link-hover-color;
-}
-
-.tab {
-    display: inline-block;
-    width: auto;
-    background: $thumbnail-bg-color;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-
-    .tab-content:first-child {
-		display: block;
-	}
-}
-
-.tab-content {
-	position: relative;
-    width: 100%;
-    display: none;
-}
-
-// Buttons
-.button {
-	font-family: "Noto Sans", sans-serif;
-    font-weight: normal;
-    font-size: 70%;
-    text-transform: uppercase;
-    color: $link-hover-color;
-    padding: 4px 13px;
-    margin: 10px;
-    border: 1px solid $link-hover-color;
-    border-radius: 10px 0 10px 0;
-    transition: all ease-in-out 0.3s;
-
-    i {
-    	font-size: 100%;
-    }
-
-    &:hover {
-    	background-color: $link-hover-color;
-    	color: white;
-    	border-radius: 8px;
-    }
-}
-
-// Thumbnails
-.thumbnail {
-	position: relative;
-    margin: 0 0 40px;
-    background: $thumbnail-bg-color;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-
-    .content {
-    	padding: 25px 0;
-    }
-
-	.see-more-link {
-		color: $link-hover-color;
-		font-family: "Noto Sans", sans-serif;
-		font-size: 70%;
-		text-transform: uppercase;
-
-		&:hover, &:focus {
-			border-bottom: 1px solid;
-		}
-	}
-
-	.footer {
-		padding: 15px 30px;
-		background: $thumbnail-footer-bg-color;
-		color: $text-color-light;
-		font-size: 75%;
-
-		a {
-			margin: 0 5px;
-		}
-
-		.tag {
-			float: right;
-			font-size: 90%;
-			text-transform: lowercase;
-		}
-
-		.category {
-			float: left;
-
-			i {
-				position: relative;
-				top: 4px;
-				margin-right: 5px;
-				font-size: 16px;
-			}
-		}
-	}
-}
-
-.see-more-link-area {
-	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.read-link {
-	color: $link-hover-color;
-	font-family: "Noto Sans", sans-serif;
-	font-size: 75%;
-	text-transform: uppercase;
-	margin: 10px;
-	border-bottom: 1px solid;
-
-	&:hover, &:focus {
-		border-bottom: none;
-	}
-}
-
-// Section "accordion style"
-.section {
-
-	margin: 0;
-
-	&.section-open {
-		margin: 0 0 30px;
-
-		.section-title h4 {
-			color: #333;
-
-			.arrow-right {
-				opacity: 0;
-			}
-
-			.arrow-down {
-				opacity: 1;
-			}
-		}
-
-		.section-content {
-			display: block;
-		}
-	}
-
-	&.section-disabled {
-		margin: 0;
-
-		.section-title h4 {
-			cursor: auto;
-
-			&:hover {
-				color: #929292;
-			}
-		}
-
-		.section-content {
-			display: none;
-		}
-	}
-}
-
-.section-title {
-
-	hr {
-	    margin: 5px 0 20px;
-	    border: 0;
-	    border-top: 1px solid #d4d4d4;
-	    border-bottom: 1px solid #fff;
-	}
-
-	h4 {
-		position: relative;
-		font-family: "Noto Sans", sans-serif;
-		//font-size: 22px;
-		font-weight: normal;
-		//margin: 0 0 20px;
-		//border-bottom: 1px dotted;
-		cursor: pointer;
-	    color: #929292;
-	    transition: color ease 0.3s;
-
-	    &:hover {
-	    	color: #333;
-	    }
-
-		i {
-			position: absolute;
-			top: 6px;
-			right: 0;
-			transition: opacity ease 0.3s;
-		}
-
-		.arrow-right {
-			opacity: 1;
-		}
-
-		.arrow-down {
-			opacity: 0;
-		}
-	}
-}
-
-.section-content {
-	display: none;
-}
-
-// Featured content
-.featured-content {
-	margin-top: 30px;
-	margin-bottom: 30px;
-
-	> .row {
-		margin-left: -30px;
-		margin-right: -30px;
-	}
-
-	.header {
-		text-align: center;
-	   	margin: 10px auto 25px;
-
-		h3 {
-			font-family: "Noto Sans", sans-serif;
-			font-size: 24px;
-    		font-weight: normal;
-		}
-	}
-
-	.items {
-		float: none;
-		margin: auto;
-	}
-}
-
-// Pagination
-.custom-pagination {
-	float: right;
-	font-family: "Noto Sans", sans-serif;
-    font-size: 16px;
-    text-align: right;
-}
-.custom-pagination span,
-.custom-pagination a {
-	display: inline-block;
-  	padding: 2px 10px;
-    transition: all ease-out 0.5s;
-}
-.custom-pagination a {
-	background-color: #e4e4e4;
-	color: $link-hover-color;
-}
-.custom-pagination a:hover {
-	background-color: $link-hover-color;
-	color: #fff;
-}
-.custom-pagination span.page-num {
-	display: block;
-	margin: 6px 0;
-	padding: 0;
-    font-size: 11px;
-    text-transform: uppercase;
-}
-.custom-pagination span.dots {
-	padding: 0;
-	color: gainsboro;
-}
-.custom-pagination span.current {
-	background-color: $link-hover-color;
-	color: #fff;
-}
-
-// Sorting
 .sorting {
 	float: right;
 	font-family: "Noto Sans", sans-serif;
@@ -328,19 +32,9 @@
 	}
 }
 
-// Breadcrumb
-.breadcrumb {
-	color: $link-hover-color;
-	font-family: "Noto Sans", sans-serif;
-	margin: 0 0 35px;
-
-	h3, h4 {
-    	font-weight: normal;
-	}
-}
-
-
-// Extras
+/**
+ * 1.2 - Extras
+ */
 .triangle {
 	width: 0;
 	height: 0;
@@ -380,9 +74,8 @@
 	}
 }
 
-
 /**
- * Bootstrap grid custom
+ * 2.0 - Bootstrap grid custom
  */
 @media screen and (min-width: 1200px) {
 	.container {
@@ -403,7 +96,7 @@
 }
 
 /**
- * Twentyfifteen custom
+ * 3.0 - Twentyfifteen custom
  */
 /**
  * 6.2 Menus
@@ -425,7 +118,6 @@
 /**
  * 16.4 Desktop Small 955px
  */
-
 @media screen and (min-width: 59.6875em) {
 	body:before {
 		width: 22%;
@@ -471,7 +163,6 @@
 /**
  * 16.6 Desktop Large 1240px
  */
-
 @media screen and (min-width: 77.5em) {
 	.site-title {
 		font-size: 18px;

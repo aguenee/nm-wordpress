@@ -1,8 +1,18 @@
-// Thumbnail
+/**
+ * Book styles
+ *
+ * 1.0 - Thumbnail
+ * 2.0 - Featured content
+ * 3.0 - Single
+ */
+
+/**
+ * 1.0 - Thumbnail
+ */
 .thumbnail-book {
 
 	small {
-		font-size: 70%;
+		font-size: 13px;
 	}
 
 	.corner {
@@ -65,7 +75,7 @@
 	}
 
 	.authors {
-		font-size: 80%;
+		font-size: 15px;
 		font-weight: normal;
 	}
 
@@ -74,13 +84,15 @@
 	}
 
 	.description {
-		font-size: 80%;
+		font-size: 14px;
 	    margin: 10px 0 15px;
 	}
 
 }
 
-// Featured content
+/**
+ * 2.0 - Featured content
+ */
 .featured-content {
 
 	.thumbnail-book {
@@ -101,13 +113,13 @@
 		}
 
 		.title {
-		    font-size: 75%;
+		    font-size: 14px;
     		line-height: 20px;
     		margin-bottom: 6px;
 		}
 
 		.authors {
-			font-size: 70%;
+			font-size: 13px;
 			line-height: 18px;
 		}
 
@@ -120,7 +132,7 @@
 			}
 
 			.category {
-			    font-size: 90%;
+			    font-size: 13px;
 
 			    i {
 			    	font-size: 12px;
@@ -132,7 +144,9 @@
 	}
 }
 
-// Single book
+/**
+ * 3.0 - Single
+ */
 #book {
 	padding: 0;
 
@@ -143,7 +157,6 @@
 
 	.authors {
 	    font-size: 15px;
-	    //color: #727272;
 	    font-weight: normal;
 	   	font-family: "Noto Sans", sans-serif;
 	}
@@ -173,7 +186,7 @@
 
 	.description {
 		width: 100%;
-		font-size: 75%;
+		font-size: 14px;
 	    line-height: 1.8em;
 	    margin: 20px 0 10px;
 
@@ -195,7 +208,6 @@
 	}
 
 	.infos {
-		//text-align: right;
 	}
 
 	.button-buy {
@@ -208,7 +220,7 @@
 		padding: 20px 30px;
 		background: $thumbnail-footer-bg-color;
 		color: $text-color-light;
-		font-size: 75%;
+		font-size: 14px;
 
 		a {
 			margin: 0 5px;
@@ -216,7 +228,7 @@
 
 		.tag {
 			float: right;
-			font-size: 90%;
+			font-size: 13px;
 			text-transform: lowercase;
 		}
 
@@ -233,4 +245,3 @@
 	}
 
 }
-
