@@ -41,6 +41,19 @@ while ( have_posts() ) : the_post();
 	<main id="main" class="site-main container" role="main">
 
 		<div class="row">
+			<div class="col-sm-6 col-md-6">
+				<div class="breadcrumb">
+					<a href="<?php echo get_permalink( PAGE_BOOKS_ID ); ?>"><?php echo __( 'Books', 'twentyfifteen-child' ); ?></a>
+					<span class="separator">&raquo;</span>
+					<h2 class="current-page"><?php the_title(); ?></h2>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6">
+				<!-- TODO -->
+			</div>
+		</div>
+
+		<div class="row">
 			<section id="tabs-container" class="col-sm-12 col-md-12">
 			    <ul class="tabs-menu">
 			        <li class="current"><a href="#book"><?php echo __( 'Book', 'twentyfifteen-child' ); ?></a></li>
@@ -56,8 +69,6 @@ while ( have_posts() ) : the_post();
 
 				            <a class="read-link" href="#" title="<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>">
 				            	<i class="material-icons">book</i>
-								<!--<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>-->
-								<!--<i class="material-icons">open_in_new</i>-->
 							</a>
 
 				            <div class="description clearfix">

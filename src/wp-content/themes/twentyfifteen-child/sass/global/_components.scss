@@ -21,7 +21,6 @@
     text-transform: uppercase;
     color: $link-hover-color;
     padding: 4px 13px;
-    margin: 10px;
     border: 1px solid $link-hover-color;
     border-radius: 10px 0 10px 0;
     transition: all ease-in-out 0.3s;
@@ -37,16 +36,31 @@
     }
 }
 
+.button-all {
+    float: right;
+    margin: 0 0 10px 10px;
+    font-size: 11px;
+}
+
 /**
  * 2.0 - Breadcrumb
  */
 .breadcrumb {
-    color: $link-hover-color;
     font-family: "Noto Sans", sans-serif;
-    margin: 0 0 35px;
+    font-size: 14px;
+    margin: 0 0 30px;
 
-    h3, h4 {
+    h2, h3, h4 {
         font-weight: normal;
+        display: inline-block;
+    }
+
+    .separator {
+        color: #ADA3A3;
+    }
+
+    .current-page {
+        color: $link-hover-color;
     }
 }
 
@@ -258,10 +272,13 @@
  * 7.0 - Section "accordion style"
  */
 .section {
-    margin: 0;
+    margin: 0 0 10px;
+
+    &:first-child {
+        margin-top: 30px;
+    }
 
     &.section-open {
-        margin: 0 0 30px;
 
         .section-title h4 {
             color: #333;
@@ -281,7 +298,6 @@
     }
 
     &.section-disabled {
-        margin: 0;
 
         .section-title h4 {
             cursor: auto;

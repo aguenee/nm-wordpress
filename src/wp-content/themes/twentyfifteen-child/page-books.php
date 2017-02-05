@@ -31,12 +31,12 @@ $books = new WP_Query( array(
 	<main id="main" class="site-main container" role="main">
 
 		<section class="row">
-			<!--<div class="col-sm-6 col-md-6">
+			<div class="col-sm-6 col-md-6">
 				<div class="breadcrumb">
-					<h3><?php echo __( 'Books', 'twentyfifteen-child' ); ?></h3>
+					<h2 class="current-page"><?php echo __( 'Books', 'twentyfifteen-child' ); ?></h2>
 				</div>
-			</div>-->
-			<div class="col-sm-12 col-md-12">
+			</div>
+			<div class="col-sm-6 col-md-6">
 				<form class="sorting" action="" method="GET">
 					<img class="loader hidden" src="<?php echo get_stylesheet_directory_uri(); ?>/img/loader.gif ?>" alt="" />
 					<label for="sortby"><?php echo __( 'Sort by', 'twentyfifteen-child' ); ?>&nbsp;</label>
@@ -74,7 +74,7 @@ $books = new WP_Query( array(
 				$price = get_field( 'book_price', $book, false );
 				// Description
 	        	$description = wp_strip_all_tags( get_post_field( 'post_content', $book ) );
-	        	$description = strlen( $description ) > 300 ? mb_substr( $description, 0, 300 ) . '...' : $description;
+	        	$description = strlen( $description ) > 370 ? mb_substr( $description, 0, 370 ) . '...' : $description;
 	        	// Tags
 	        	$tags = wp_get_post_tags( $book->ID );
         		// Categories
