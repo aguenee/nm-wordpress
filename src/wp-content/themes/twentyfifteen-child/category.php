@@ -45,9 +45,11 @@ $reportages = new WP_Query( array(
     <main id="main" class="site-main container" role="main">
 
         <div class="row term-header">
+            <!-- Title -->
             <div class="col-sm-5 col-md-5">
                 <h2 class="category-title"><i class="material-icons">local_offer</i><?php echo $term->name; ?></h2>
             </div>
+            <!-- Buttons -->
             <div class="col-sm-7 col-md-7">
                 <a href="<?php echo get_permalink( PAGE_STORIES_ID ); ?>" class="button button-all"><?php echo __( 'All stories', 'twentyfifteen-child' ); ?></a>
                 <a href="<?php echo get_permalink( PAGE_BOOKS_ID ); ?>" class="button button-all"><?php echo __( 'All books', 'twentyfifteen-child' ); ?></a>
@@ -103,7 +105,6 @@ $reportages = new WP_Query( array(
                     // Categories
                     $categories = get_post_categories( $post );
                 ?>
-
                     <div class="col-sm-4 col-md-4 grid-item">
                         <article class="thumbnail thumbnail-book">
                             <div class="content">

@@ -31,11 +31,13 @@ $books = new WP_Query( array(
 	<main id="main" class="site-main container" role="main">
 
 		<section class="row">
+			<!-- Breadcrumb -->
 			<div class="col-sm-6 col-md-6">
 				<div class="breadcrumb">
 					<h2 class="current-page"><?php echo __( 'Books', 'twentyfifteen-child' ); ?></h2>
 				</div>
 			</div>
+			<!-- Sorting -->
 			<div class="col-sm-6 col-md-6">
 				<form class="sorting" action="" method="GET">
 					<img class="loader hidden" src="<?php echo get_stylesheet_directory_uri(); ?>/img/loader.gif ?>" alt="" />
@@ -58,6 +60,7 @@ $books = new WP_Query( array(
 			</div>
 		</section>
 
+	<!-- Books -->
 	<?php if ( $books->have_posts() ) : ?>
 		<?php while ( $books->have_posts() ) :
 				// Post
@@ -80,7 +83,6 @@ $books = new WP_Query( array(
         		// Categories
 				$categories = get_post_categories( $post );
 		?>
-			
 			<article class="row thumbnail thumbnail-book">
 				<div class="content clearfix">
 					<div class="corner">
@@ -127,9 +129,9 @@ $books = new WP_Query( array(
 					<?php endforeach; ?>
 				</div>
 			</article>
-
 		<?php endwhile; ?>
 
+		<!-- Pagination -->
 		<?php if ( function_exists( custom_pagination ) ) : ?>
 			<div class="row">
 				<div class="col-sm-12 col-md-12">

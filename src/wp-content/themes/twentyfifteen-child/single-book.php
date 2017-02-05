@@ -7,7 +7,6 @@ get_header();
 
 // Start the loop.
 while ( have_posts() ) : the_post();
-
 	// Cover
 	$coverImage = get_field( 'book_cover_image' );
 	// Authors
@@ -42,6 +41,7 @@ while ( have_posts() ) : the_post();
 
 		<div class="row">
 			<div class="col-sm-6 col-md-6">
+				<!-- Breadcrumb -->
 				<div class="breadcrumb">
 					<a href="<?php echo get_permalink( PAGE_BOOKS_ID ); ?>"><?php echo __( 'Books', 'twentyfifteen-child' ); ?></a>
 					<span class="separator">&raquo;</span>
@@ -54,6 +54,7 @@ while ( have_posts() ) : the_post();
 		</div>
 
 		<div class="row">
+			<!-- Tabs -->
 			<section id="tabs-container" class="col-sm-12 col-md-12">
 			    <ul class="tabs-menu">
 			        <li class="current"><a href="#book"><?php echo __( 'Book', 'twentyfifteen-child' ); ?></a></li>
@@ -122,6 +123,7 @@ while ( have_posts() ) : the_post();
 			</section>
 		</div>
 
+		<!-- Featured content -->
 		<?php if ( !empty($featuredBooks) ) : ?>
 			<section class="featured-content">
 				<div class="row">
@@ -130,27 +132,15 @@ while ( have_posts() ) : the_post();
 					</div>
 				
 					<?php $containerSize = count( $featuredBooks ) * 4; ?>
-					<!-- 4 pour 1, 8 pour 2, 12 pour 3 -->
 					<div class="items <?php echo 'col-sm-' . $containerSize . ' col-md-' . $containerSize; ?>">
 						<div class="row">
 						<?php $colSize = 12 / count( $featuredBooks ); ?>
 
 						<?php foreach ( $featuredBooks as $featuredBook ) :
-								// Post
-								//$book = get_post( $books->the_post() );
 								// Cover
 								$coverImage = get_field( 'book_cover_image', $featuredBook );
 								// Authors
 								$authors = get_field( 'book_authors', $featuredBook, false );
-								// Publication date
-								//$publicationDate = new DateTime( get_field( 'book_publication_date', $book, false ) );
-								// Editor
-								//$editor = get_field( 'book_editor', $book, false );
-								// Price
-								//$price = get_field( 'book_price', $book, false );
-								// Description
-					        	//$description = wp_strip_all_tags( get_post_field( 'post_content', $book ) );
-					        	//$description = strlen( $description ) > 300 ? mb_substr( $description, 0, 300 ) . '...' : $description;
 					        	// Tags
 					        	$tags = wp_get_post_tags( $featuredBook->ID );
 					    		// Categories
