@@ -40,7 +40,7 @@ while ( have_posts() ) : the_post();
 	<main id="main" class="site-main container" role="main">
 
 		<div class="row">
-			<div class="col-sm-6 col-md-6">
+			<div class="col-sm-8 col-md-8">
 				<!-- Breadcrumb -->
 				<div class="breadcrumb">
 					<a href="<?php echo get_permalink( PAGE_BOOKS_ID ); ?>"><?php echo __( 'Books', 'twentyfifteen-child' ); ?></a>
@@ -48,8 +48,11 @@ while ( have_posts() ) : the_post();
 					<h2 class="current-page"><?php the_title(); ?></h2>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-6">
-				<!-- TODO -->
+			<div class="col-sm-4 col-md-4">
+				<a href="<?php echo get_permalink( PAGE_BOOKS_ID ); ?>" class="button button-back">
+					<i class="material-icons">arrow_back</i>
+					<?php echo __( 'Back to the list', 'twentyfifteen-child' ); ?>
+				</a>
 			</div>
 		</div>
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 16:32+0000\n"
+"POT-Creation-Date: 2017-02-05 07:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,87 +14,99 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: category.php:58 tag.php:58 inc/custom-post-types.php:14
+#: category.php:54 tag.php:54 inc/custom-post-types.php:16
+msgid "All stories"
+msgstr ""
+
+#: category.php:55 tag.php:55 inc/custom-post-types.php:53
+msgid "All books"
+msgstr ""
+
+#: category.php:56 tag.php:56 inc/custom-post-types.php:90
+msgid "All reportages"
+msgstr ""
+
+#: category.php:65 tag.php:65 inc/custom-post-types.php:14
 msgid "Stories"
 msgstr ""
 
 #. Name of the template
-#: category.php:78 page-books.php:36 tag.php:78 inc/custom-post-types.php:51
+#: category.php:85 page-books.php:37 single-book.php:46 tag.php:85
+#: inc/custom-post-types.php:51
 msgid "Books"
 msgstr ""
 
-#: category.php:118 category.php:151 category.php:183 category.php:215
-#: page-books.php:113 page-books.php:116 single-book.php:162 tag.php:117
-#: tag.php:150 tag.php:182 tag.php:214
+#: category.php:124 page-books.php:116 page-books.php:119 single-book.php:168
+#: tag.php:124
 msgid "See more"
 msgstr ""
 
-#: category.php:237 tag.php:236 inc/custom-post-types.php:88
+#: category.php:147 tag.php:147 inc/custom-post-types.php:88
 msgid "Reportages"
 msgstr ""
 
-#: page-books.php:41
+#: page-books.php:44
 msgid "Sort by"
 msgstr ""
 
-#: page-books.php:44
+#: page-books.php:47
 msgid "Date: descending"
 msgstr ""
 
-#: page-books.php:47
+#: page-books.php:50
 msgid "Date: ascending"
 msgstr ""
 
-#: page-books.php:50
+#: page-books.php:53
 msgid "Title: A->Z"
 msgstr ""
 
-#: page-books.php:53
+#: page-books.php:56
 msgid "Title: Z->A"
 msgstr ""
 
-#: page-books.php:100 single-book.php:71
+#: page-books.php:103 single-book.php:87
 msgid "Publication"
 msgstr ""
 
-#: page-books.php:104 single-book.php:75
+#: page-books.php:107 single-book.php:91
 msgid "Editor"
 msgstr ""
 
-#: page-books.php:108 single-book.php:79
+#: page-books.php:111 single-book.php:95
 msgid "Price"
 msgstr ""
 
-#: single-book.php:45 inc/custom-post-types.php:52
+#: single-book.php:63 inc/custom-post-types.php:52
 msgid "Book"
 msgstr ""
 
-#: single-book.php:46
+#: single-book.php:54
+msgid "Back to the list"
+msgstr ""
+
+#: single-book.php:64
 msgid "Press"
 msgstr ""
 
-#: single-book.php:47
+#: single-book.php:65
 msgid "Videos"
 msgstr ""
 
-#: single-book.php:56 single-book.php:58
+#: single-book.php:74
 msgid "Read +"
 msgstr ""
 
-#: single-book.php:84
+#: single-book.php:100
 msgid "Buy"
 msgstr ""
 
-#: single-book.php:116
+#: single-book.php:134
 msgid "Around the same theme"
 msgstr ""
 
 #: inc/custom-post-types.php:15
 msgid "Story"
-msgstr ""
-
-#: inc/custom-post-types.php:16
-msgid "All stories"
 msgstr ""
 
 #: inc/custom-post-types.php:17 inc/custom-post-types.php:54
@@ -136,20 +148,12 @@ msgstr ""
 msgid "Not found in trash"
 msgstr ""
 
-#: inc/custom-post-types.php:53
-msgid "All books"
-msgstr ""
-
 #: inc/custom-post-types.php:55
 msgid "Add a book"
 msgstr ""
 
 #: inc/custom-post-types.php:89
 msgid "Reportage"
-msgstr ""
-
-#: inc/custom-post-types.php:90
-msgid "All reportages"
 msgstr ""
 
 #: inc/custom-post-types.php:92

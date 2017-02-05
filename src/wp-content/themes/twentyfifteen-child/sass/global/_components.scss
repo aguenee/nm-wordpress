@@ -42,6 +42,20 @@
     font-size: 11px;
 }
 
+.button-back {
+    position: relative;
+    float: right;
+    font-size: 11px;
+    padding-left: 26px;
+
+    i {
+        position: absolute;
+        top: 6px;
+        left: 8px;
+        font-size: 14px;
+    }
+}
+
 /**
  * 2.0 - Breadcrumb
  */
