@@ -44,9 +44,14 @@ $reportages = new WP_Query( array(
 <div id="primary" class="content-area">
     <main id="main" class="site-main container" role="main">
 
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
+        <div class="row term-header">
+            <div class="col-sm-5 col-md-5">
                 <h2 class="tag-title">#<?php echo $term->name; ?></h2>
+            </div>
+            <div class="col-sm-7 col-md-7">
+                <a href="<?php echo get_permalink( PAGE_STORIES_ID ); ?>" class="button button-all"><?php echo __( 'All stories', 'twentyfifteen-child' ); ?></a>
+                <a href="<?php echo get_permalink( PAGE_BOOKS_ID ); ?>" class="button button-all"><?php echo __( 'All books', 'twentyfifteen-child' ); ?></a>
+                <a href="<?php echo get_permalink( PAGE_REPORTAGES_ID ); ?>" class="button button-all"><?php echo __( 'All reportages', 'twentyfifteen-child' ); ?></a>
             </div>
         </div>
 
@@ -129,102 +134,6 @@ $reportages = new WP_Query( array(
                         </article>
                     </div>
                 <?php endwhile; ?>
-                <div class="col-sm-4 col-md-4">
-                    <article class="thumbnail thumbnail-book">
-                        <div class="content">
-                            <div class="corner">
-                                <a href="#" class="triangle triangle-top-right"></a>
-                                <span class="label"><i class="material-icons">add</i></span>
-                            </div>
-                            <a class="image clearfix" href="<?php echo get_permalink( $book ); ?>">
-                                <?php //if ( $coverImage ): ?>
-                                    <!--<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $book->post_title; ?>" />-->
-                                <?php //else: ?>
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/book-cover.jpg" alt="<?php echo $book->post_title; ?>" />
-                                <?php //endif; ?>
-                            </a>
-                            <h3 class="title">
-                                <a href="<?php echo get_permalink( $book ); ?>">Titre<?php //echo $book->post_title; ?></a>
-                            </h3>
-                            <h3 class="authors">Auteurs<?php //echo $authors; ?></h3>
-                            <a class="see-more-link-area" href="<?php //echo get_permalink( $book ); ?>" title="<?php echo __( 'See more', 'twentyfifteen-child' ); ?>"></a>
-                        </div>
-                        <!--<div class="footer">
-                            <?php foreach ( $categories as $index => $category ) : ?>
-                                <a href="<?php echo get_category_link( $category ); ?>" class="category">
-                                    <i class="material-icons">local_offer</i><?php echo $category->name; ?>
-                                </a>&nbsp;
-                            <?php endforeach; ?>
-                            <?php foreach ( $tags as $index => $tag ) : ?>
-                                <a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
-                            <?php endforeach; ?>
-                        </div>-->
-                    </article>
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    <article class="thumbnail thumbnail-book">
-                        <div class="content">
-                            <div class="corner">
-                                <a href="#" class="triangle triangle-top-right"></a>
-                                <span class="label"><i class="material-icons">add</i></span>
-                            </div>
-                            <a class="image clearfix" href="<?php echo get_permalink( $book ); ?>">
-                                <?php //if ( $coverImage ): ?>
-                                    <!--<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $book->post_title; ?>" />-->
-                                <?php //else: ?>
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/book-cover.jpg" alt="<?php echo $book->post_title; ?>" />
-                                <?php //endif; ?>
-                            </a>
-                            <h3 class="title">
-                                <a href="<?php echo get_permalink( $book ); ?>">Titre<?php //echo $book->post_title; ?></a>
-                            </h3>
-                            <h3 class="authors">Auteurs<?php //echo $authors; ?></h3>
-                            <a class="see-more-link-area" href="<?php //echo get_permalink( $book ); ?>" title="<?php echo __( 'See more', 'twentyfifteen-child' ); ?>"></a>
-                        </div>
-                        <!--<div class="footer">
-                            <?php foreach ( $categories as $index => $category ) : ?>
-                                <a href="<?php echo get_category_link( $category ); ?>" class="category">
-                                    <i class="material-icons">local_offer</i><?php echo $category->name; ?>
-                                </a>&nbsp;
-                            <?php endforeach; ?>
-                            <?php foreach ( $tags as $index => $tag ) : ?>
-                                <a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
-                            <?php endforeach; ?>
-                        </div>-->
-                    </article>
-                </div>
-                <div class="col-sm-4 col-md-4">
-                    <article class="thumbnail thumbnail-book">
-                        <div class="content">
-                            <div class="corner">
-                                <a href="#" class="triangle triangle-top-right"></a>
-                                <span class="label"><i class="material-icons">add</i></span>
-                            </div>
-                            <a class="image clearfix" href="<?php echo get_permalink( $book ); ?>">
-                                <?php //if ( $coverImage ): ?>
-                                    <!--<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $book->post_title; ?>" />-->
-                                <?php //else: ?>
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/book-cover.jpg" alt="<?php echo $book->post_title; ?>" />
-                                <?php //endif; ?>
-                            </a>
-                            <h3 class="title">
-                                <a href="<?php echo get_permalink( $book ); ?>">Titre<?php //echo $book->post_title; ?></a>
-                            </h3>
-                            <h3 class="authors">Auteurs<?php //echo $authors; ?></h3>
-                            <a class="see-more-link-area" href="<?php //echo get_permalink( $book ); ?>" title="<?php echo __( 'See more', 'twentyfifteen-child' ); ?>"></a>
-                        </div>
-                        <!--<div class="footer">
-                            <?php foreach ( $categories as $index => $category ) : ?>
-                                <a href="<?php echo get_category_link( $category ); ?>" class="category">
-                                    <i class="material-icons">local_offer</i><?php echo $category->name; ?>
-                                </a>&nbsp;
-                            <?php endforeach; ?>
-                            <?php foreach ( $tags as $index => $tag ) : ?>
-                                <a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
-                            <?php endforeach; ?>
-                        </div>-->
-                    </article>
-                </div>
             </div>
         </section>
 

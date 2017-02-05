@@ -46,31 +46,35 @@
     right: 0;
 	border-top: 30px solid #f45844;
 	border-left: 35px solid transparent;
+} 
+
+.term-header {
+	margin-bottom: 20px;
 }
 
 .tag-title {
 	text-transform: lowercase;
 	color: $link-hover-color;
 	font-family: "Noto Sans", sans-serif;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: normal;
-	margin: 0 0 30px;
+    line-height: 24px;
 }
 
 .category-title {
 	position: relative;
-	padding-left: 26px;
+	padding-left: 20px;
 	color: $link-hover-color;
 	font-family: "Noto Sans", sans-serif;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: normal;
-	margin: 0 0 30px;
+    line-height: 24px;
 
 	i {
 	    position: absolute;
-		top: 10px;
+		top: 5px;
 		left: 0;
-		font-size: 22px;
+		font-size: 16px;
 	}
 }
 
