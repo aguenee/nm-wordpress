@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-05 07:32+0000\n"
+"POT-Creation-Date: 2017-02-06 20:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "All reportages"
 msgstr ""
 
-#: category.php:65 tag.php:65 inc/custom-post-types.php:14
+#: category.php:65 page-stories.php:37 tag.php:65 inc/custom-post-types.php:14
 msgid "Stories"
 msgstr ""
 
@@ -36,32 +36,34 @@ msgstr ""
 msgid "Books"
 msgstr ""
 
-#: category.php:124 page-books.php:116 page-books.php:119 single-book.php:168
-#: tag.php:124
+#: category.php:124 page-books.php:116 page-books.php:119 page-stories.php:123
+#: page-stories.php:125 page-stories.php:159 page-stories.php:161
+#: page-stories.php:195 page-stories.php:197 single-book.php:168 tag.php:124
 msgid "See more"
 msgstr ""
 
-#: category.php:147 tag.php:147 inc/custom-post-types.php:88
+#: category.php:147 page-reportages.php:37 tag.php:147
+#: inc/custom-post-types.php:88
 msgid "Reportages"
 msgstr ""
 
-#: page-books.php:44
+#: page-books.php:44 page-reportages.php:44 page-stories.php:44
 msgid "Sort by"
 msgstr ""
 
-#: page-books.php:47
+#: page-books.php:47 page-reportages.php:47 page-stories.php:47
 msgid "Date: descending"
 msgstr ""
 
-#: page-books.php:50
+#: page-books.php:50 page-reportages.php:50 page-stories.php:50
 msgid "Date: ascending"
 msgstr ""
 
-#: page-books.php:53
+#: page-books.php:53 page-reportages.php:53 page-stories.php:53
 msgid "Title: A->Z"
 msgstr ""
 
-#: page-books.php:56
+#: page-books.php:56 page-reportages.php:56 page-stories.php:56
 msgid "Title: Z->A"
 msgstr ""
 
@@ -75,6 +77,10 @@ msgstr ""
 
 #: page-books.php:111 single-book.php:95
 msgid "Price"
+msgstr ""
+
+#: page-stories.php:87 page-stories.php:89
+msgid "Read the story"
 msgstr ""
 
 #: single-book.php:63 inc/custom-post-types.php:52
