@@ -25,8 +25,8 @@ function custom_post_type() {
     );
     $args = array(
         'labels'              => $labels,
-        'supports'            => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
-        //'taxonomies'          => array( 'category', 'post_tag' ),
+        'supports'            => array( 'title', 'editor', 'page-attributes' ),
+        'taxonomies'          => array( 'category', 'post_tag' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,
@@ -37,9 +37,9 @@ function custom_post_type() {
         'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
-        'capability_type'     => 'page',
-        'hierarchical'        => false,
+        //'capability_type'     => 'page',
         'rewrite'			  => array( 'slug' => 'story' ),
+        'hierarchical'        => true,
         // roles and capabilities
         //'capability_type'     => array( 'story', 'stories' ),
         //'map_meta_cap'        => true
@@ -74,7 +74,7 @@ function custom_post_type() {
         'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
-        'capability_type'     => 'page',
+        //'capability_type'     => 'page',
         'hierarchical'        => false,
         'rewrite'             => array( 'slug' => 'book' ),
         // roles and capabilities

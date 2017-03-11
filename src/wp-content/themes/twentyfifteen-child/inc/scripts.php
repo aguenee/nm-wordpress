@@ -11,6 +11,15 @@ function twentyfifteen_child_scripts() {
     wp_register_script( 'jquery', get_stylesheet_directory_uri().'/node_modules/jquery/dist/jquery.min.js', false, null );
     wp_enqueue_script( 'jquery' );
 
+    // Modernizr
+    wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri().'/js/vendor/modernizr.custom.js' );
+
+    // jQuery++
+    wp_enqueue_script( 'jquerypp', get_stylesheet_directory_uri().'/js/vendor/jquerypp.custom.js' );
+
+    // BookBlock
+    wp_enqueue_script( 'bookblock', get_stylesheet_directory_uri().'/js/vendor/jquery.bookblock.min.js' );
+
     // PDFjs
     wp_enqueue_script( 'pdfjs.worker', get_stylesheet_directory_uri().'/node_modules/pdfjs-dist/build/pdf.worker.min.js' );
     wp_enqueue_script( 'pdfjs', get_stylesheet_directory_uri().'/node_modules/pdfjs-dist/build/pdf.min.js' );
