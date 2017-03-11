@@ -12,7 +12,7 @@ $sortInfos = explode( '_', $sortby );
 $orderby = $sortInfos[0] == 'date' ? 'meta_value' : $sortInfos[0];
 $order = $sortInfos[1];
 
-// Get books (5 per page)
+// Get books
 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 $books = new WP_Query( array(
 	'meta_key'		 => 'book_publication_date',
@@ -81,7 +81,7 @@ $books = new WP_Query( array(
 	        	// Tags
 	        	$tags = wp_get_post_tags( $book->ID );
         		// Categories
-				$categories = get_post_categories( $post );
+				$categories = get_post_categories( $book );
 		?>
 			<article class="row thumbnail thumbnail-book">
 				<div class="content clearfix">
