@@ -1,0 +1,193 @@
+/**
+ * Story styles
+ *
+ * 1.0 - Thumbnail
+ * 2.0 - 
+ * x.0 - Single story
+ */
+
+
+/**
+ * 1.0 - Thumbnail
+ */
+.thumbnail-story {
+	background: #fff;
+	position: relative;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	margin-bottom: 30px;
+
+    .content {
+    	position: relative;
+        padding: 12px 15px 15px;
+    }
+
+	.content:hover {
+
+		.title {
+			color: $link-hover-color;
+	   		transition: all ease-out 0.5s;
+		}
+
+		.see-more-link {
+			border-bottom: 1px solid $link-hover-color;
+		}
+
+		.corner {
+			opacity: 1;
+	   		transition: opacity ease-in-out 0.8s;
+		}
+	}
+
+    .corner {
+		position: absolute;
+	    top: 0;
+	    right: -1px;
+	    opacity: 0;
+
+	    .label {
+	    	position: absolute;
+		    top: 0;
+		    right: 3px;
+		    line-height: 20px;
+		    color: white;
+	    }
+
+	    i {
+    	    font-size: 75%;
+	    }
+	}
+
+	img {
+    	position: absolute;
+	    top: 50%;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+		display: block;
+		width: auto;
+		height: auto;
+	    transform: translate(0,-50%);
+	}
+
+	.title {
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+		font-size: 16px;
+		margin-bottom: 10px;
+		line-height: 20px;
+	}
+
+	nav {
+		text-align: center;
+		margin-top: 6px;
+		line-height: 0;
+
+		span {
+			position: relative;
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: #f0f0f0;
+			margin: 3px;
+			cursor: pointer;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,0.2), 0 2px 1px rgba(255,255,255,0.9);
+			z-index: 200;
+			transition: all ease 0.5s;
+
+			&:hover {
+				background: #333;
+			}
+
+			&.bb-current {
+				background: $link-hover-color;
+			}
+		}
+	}
+
+	.description {
+		font-size: 14px;
+	    line-height: 24px;
+	    margin: 10px 0 5px;
+	}
+
+    .see-more-link {
+        color: $link-hover-color;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+
+        &:hover, &:focus {
+            border-bottom: 1px solid;
+        }
+    }
+
+	.footer {
+		padding: 10px;
+        background: $thumbnail-footer-bg-color;
+        color: $text-color-light;
+        font-size: 14px;
+        
+        .tag {
+            float: none;
+            display: inline-block;
+            font-size: 13px;
+            text-transform: lowercase;
+        }
+
+        .category {
+            float: none;
+            display: inline-block;
+
+            i {
+                position: relative;
+                top: 2px;
+			    margin-right: 4px;
+			    font-size: 13px;
+            }
+        }
+	}
+
+}
+
+/**
+ * x.0 - Single story
+ */
+.single-story {
+	/* hide sidebar */
+	/*&:before {
+		width: 0;
+	}
+
+	.sidebar {
+		display: none;
+	}
+
+	.site-content {
+		float: none;
+		margin: auto;
+	}*/
+
+	.wrapper {
+		background: white;
+		//padding: 60px 0;
+	}
+
+
+	.cover {
+
+	}
+	/*.title {
+		margin-bottom: 20px;
+		text-align: center;
+	}*/
+
+	.content {
+		margin: 10px auto 0;
+		float: none;
+		font-size: 14px;
+		line-height: 26px;
+		max-width: 85%;
+	}
+}
