@@ -169,25 +169,37 @@
 		margin: auto;
 	}*/
 
-	.wrapper {
+	.sheet-white {
 		background: white;
-		//padding: 60px 0;
 	}
 
 
 	.cover {
+		position: relative;
+		height: 400px;
+		overflow: hidden;
 
+		img {
+			position: absolute;
+		    left: 50%;
+		    right: 0;
+		    top: 60%;
+		    transform: translate(-50%, -50%);
+		}
 	}
-	/*.title {
-		margin-bottom: 20px;
-		text-align: center;
-	}*/
 
 	.content {
-		margin: 10px auto 0;
+		margin: 10px auto 60px;
 		float: none;
 		font-size: 14px;
 		line-height: 26px;
 		max-width: 85%;
+
+		.title {
+			margin: 40px auto;
+			text-align: center;
+			font-size: 22px;
+			line-height: 30px;
+		}
 	}
 }

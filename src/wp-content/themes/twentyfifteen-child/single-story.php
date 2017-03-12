@@ -56,15 +56,14 @@ while ( have_posts() ) : the_post();
 			</div>
 		</div>
 
-<?php $coverImage = get_field( 'carousel_picture_1' ); ?>
-		<div class="row wrapper">
-
+		<div class="row sheet-white">
 			<div class="cover">
+				<?php $coverImage = get_field( 'carousel_picture_1' ); ?>
 				<img src="<?php echo $coverImage['sizes']['large']; ?>" alt="<?php echo $post->post_title; ?>" />
-				<h2><?php the_title(); ?></h2>
 			</div>
 
 			<div class="col-sm-12 col-md-12 content">
+				<h2 class="title"><?php the_title(); ?></h2>
 				<?php the_content(); ?>
 			</div>
 		</div>
