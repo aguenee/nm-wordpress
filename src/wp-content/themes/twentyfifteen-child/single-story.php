@@ -56,7 +56,7 @@ while ( have_posts() ) : the_post();
 			</div>
 		</div>
 
-		<div class="row sheet-white">
+		<div class="row sheet">
 			<div class="cover">
 				<?php $coverImage = get_field( 'carousel_picture_1' ); ?>
 				<img src="<?php echo $coverImage['sizes']['large']; ?>" alt="<?php echo $post->post_title; ?>" />
