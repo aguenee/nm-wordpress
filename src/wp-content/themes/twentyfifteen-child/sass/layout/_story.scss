@@ -203,4 +203,43 @@
 			line-height: 30px;
 		}
 	}
+
+	.previous-next-page {
+
+		margin-top: 20px;
+
+		.previous-page {
+			float: left;
+		    text-align: left;
+		}
+
+		.next-page {
+			float: right;
+		    text-align: right;
+		}
+
+		.the-end {
+			float: right;
+		    text-align: right;
+		}
+
+		a {
+			display: inline-block;
+		}
+
+		span {
+			display: block;
+		}
+
+		.previous-page-title,
+		.next-page-title {
+			font-size: 13px;
+		}
+
+		.previous-page-label,
+		.next-page-label {
+			font-family: "Noto Sans", sans-serif;
+			font-size: 17px;
+		}
+	}
 }

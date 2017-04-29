@@ -126,3 +126,20 @@ function get_post_categories( $post ) {
 
 	return $categories;
 }
+
+/**
+ * Sort items hierarchically
+ * @param $a
+ * @param $b
+ * @return int
+ */
+function sort_hierarchically( $a, $b ) {
+	$itemA = get_post( pll_get_post( $a, $locale ) );
+	$itemB = get_post( pll_get_post( $b, $locale ) );
+
+    if ( $itemA->menu_order == $itemB->menu_order ) {
+        return 0;
+    }
+
+    return ( $itemA->menu_order < $itemB->menu_order ) ? -1 : 1;
+}

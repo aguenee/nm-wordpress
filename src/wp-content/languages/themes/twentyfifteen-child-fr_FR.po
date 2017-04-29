@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twentyfifteen-child\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-06 20:47+0000\n"
-"PO-Revision-Date: 2017-02-06 20:47+0000\n"
+"POT-Creation-Date: 2017-04-29 19:41+0000\n"
+"PO-Revision-Date: 2017-04-29 19:42+0000\n"
 "Last-Translator: admin <audreyguenee@free.fr>\n"
 "Language-Team: French (France)\n"
 "Language: fr-FR\n"
@@ -13,9 +13,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: page-stories.php:87 page-stories.php:89
-msgid "Read the story"
-msgstr "Lire l'histoire"
+#: single-story.php:98
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: single-story.php:107
+msgid "Next page"
+msgstr "Page suivante"
+
+#: single-story.php:113
+msgid "The end."
+msgstr "Fin."
+
+#. Name of the theme
+msgid "Twenty Fifteen Child"
+msgstr ""
+
+#. Description of the theme
+msgid "Twenty Fifteen Child Theme"
+msgstr ""
+
+#. Author of the theme
+msgid "Audrey Gu├®n├®e"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://audreyguenee.com"
+msgstr ""
 
 #: category.php:54 tag.php:54 inc/custom-post-types.php:16
 msgid "All stories"
@@ -29,44 +53,29 @@ msgstr "Tous les livres"
 msgid "All reportages"
 msgstr "Tous les reportages"
 
-#: category.php:65 page-stories.php:37 tag.php:65 inc/custom-post-types.php:14
-msgid "Stories"
-msgstr "Histoires"
-
 #. Name of the template
-#: category.php:85 page-books.php:37 single-book.php:46 tag.php:85
-#: inc/custom-post-types.php:51
+#: page-books.php:37 single-book.php:46 inc/custom-post-types.php:51
+#: partials/taxonomy.php:61
 msgid "Books"
 msgstr "Livres"
 
-#: category.php:124 page-books.php:116 page-books.php:119 page-stories.php:123
-#: page-stories.php:125 page-stories.php:159 page-stories.php:161
-#: page-stories.php:195 page-stories.php:197 single-book.php:168 tag.php:124
-msgid "See more"
-msgstr "En savoir +"
-
-#: category.php:147 page-reportages.php:37 tag.php:147
-#: inc/custom-post-types.php:88
-msgid "Reportages"
-msgstr "Reportages"
-
-#: page-books.php:44 page-reportages.php:44 page-stories.php:44
+#: page-books.php:44 page-reportages.php:44 page-stories.php:43
 msgid "Sort by"
 msgstr "Trier par"
 
-#: page-books.php:47 page-reportages.php:47 page-stories.php:47
+#: page-books.php:47 page-reportages.php:47 page-stories.php:46
 msgid "Date: descending"
 msgstr "Date : ordre décroissant"
 
-#: page-books.php:50 page-reportages.php:50 page-stories.php:50
+#: page-books.php:50 page-reportages.php:50 page-stories.php:49
 msgid "Date: ascending"
 msgstr "Date : ordre croissant"
 
-#: page-books.php:53 page-reportages.php:53 page-stories.php:53
+#: page-books.php:53 page-reportages.php:53 page-stories.php:52
 msgid "Title: A->Z"
 msgstr "Titre : A->Z"
 
-#: page-books.php:56 page-reportages.php:56 page-stories.php:56
+#: page-books.php:56 page-reportages.php:56 page-stories.php:55
 msgid "Title: Z->A"
 msgstr "Titre : Z->A"
 
@@ -82,11 +91,30 @@ msgstr "Editeur"
 msgid "Price"
 msgstr "Prix"
 
+#: page-books.php:116 page-books.php:119 single-book.php:168
+#: partials/taxonomy.php:38 partials/taxonomy.php:100
+msgid "See more"
+msgstr "En savoir +"
+
+#: page-reportages.php:37 inc/custom-post-types.php:88
+#: partials/taxonomy.php:123
+msgid "Reportages"
+msgstr "Reportages"
+
+#: page-stories.php:36 single-story.php:56 inc/custom-post-types.php:14
+#: partials/taxonomy.php:6
+msgid "Stories"
+msgstr "Histoires"
+
+#: page-stories.php:108 page-stories.php:110
+msgid "Read the story"
+msgstr "Lire l'histoire"
+
 #: single-book.php:63 inc/custom-post-types.php:52
 msgid "Book"
 msgstr "Livre"
 
-#: single-book.php:54
+#: single-book.php:54 single-story.php:64
 msgid "Back to the list"
 msgstr "Retour à la liste"
 
@@ -172,7 +200,3 @@ msgstr "Page"
 #: inc/utils.php:64
 msgid "of"
 msgstr "sur"
-
-#. Author of the theme
-msgid "Anonyme"
-msgstr "Anonyme"

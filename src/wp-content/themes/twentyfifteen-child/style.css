@@ -2465,6 +2465,44 @@ a:hover, a:focus {
   font-size: 22px;
   line-height: 30px;
 }
+/* line 207, sass/layout/_story.scss */
+.single-story .previous-next-page {
+  margin-top: 20px;
+}
+/* line 211, sass/layout/_story.scss */
+.single-story .previous-next-page .previous-page {
+  float: left;
+  text-align: left;
+}
+/* line 216, sass/layout/_story.scss */
+.single-story .previous-next-page .next-page {
+  float: right;
+  text-align: right;
+}
+/* line 221, sass/layout/_story.scss */
+.single-story .previous-next-page .the-end {
+  float: right;
+  text-align: right;
+}
+/* line 226, sass/layout/_story.scss */
+.single-story .previous-next-page a {
+  display: inline-block;
+}
+/* line 230, sass/layout/_story.scss */
+.single-story .previous-next-page span {
+  display: block;
+}
+/* line 234, sass/layout/_story.scss */
+.single-story .previous-next-page .previous-page-title,
+.single-story .previous-next-page .next-page-title {
+  font-size: 13px;
+}
+/* line 239, sass/layout/_story.scss */
+.single-story .previous-next-page .previous-page-label,
+.single-story .previous-next-page .next-page-label {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 17px;
+}
 
 /**
  * Book styles
