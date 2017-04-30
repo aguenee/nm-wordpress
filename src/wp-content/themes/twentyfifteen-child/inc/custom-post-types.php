@@ -100,7 +100,7 @@ function custom_post_type() {
     $args = array(
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor', 'thumbnail' ),
-        //'taxonomies'          => array( 'category', 'post_tag' ),
+        'taxonomies'          => array( 'category', 'post_tag' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

@@ -20,10 +20,6 @@ function twentyfifteen_child_scripts() {
     // BookBlock
     wp_enqueue_script( 'bookblock', get_stylesheet_directory_uri().'/js/vendor/jquery.bookblock.min.js' );
 
-    // PDFjs
-    wp_enqueue_script( 'pdfjs.worker', get_stylesheet_directory_uri().'/node_modules/pdfjs-dist/build/pdf.worker.min.js' );
-    wp_enqueue_script( 'pdfjs', get_stylesheet_directory_uri().'/node_modules/pdfjs-dist/build/pdf.min.js' );
-
     // ScrollTop
     //wp_enqueue_script( 'smooth-scroll', get_template_directory_uri().'/js/smooth-scroll.min.js', 'jquery', '2.0', true );
 

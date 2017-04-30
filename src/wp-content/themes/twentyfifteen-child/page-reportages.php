@@ -62,25 +62,51 @@ $reportages = new WP_Query( array(
 
 	<!-- Reportages -->
 	<?php if ( $reportages->have_posts() ) : ?>
-		<?php while ( $reportages->have_posts() ) :
+		<section class="row transitions-enabled fluid masonry js-masonry grid" id="">
+			<?php while ( $reportages->have_posts() ) :
 				// Post
 				$reportage = get_post( $reportages->the_post() );
-				// Cover
-				//$coverImage = get_field( 'book_cover_image', $book );
-				// Authors
-				//$authors = get_field( 'book_authors', $book, false );
-				// Publication date
-				//$publicationDate = new DateTime( get_field( 'book_publication_date', $book, false ) );
-				// Description
-	        	//$description = wp_strip_all_tags( get_post_field( 'post_content', $book ) );
-	        	//$description = strlen( $description ) > 370 ? mb_substr( $description, 0, 370 ) . '...' : $description;
 	        	// Tags
 	        	$tags = wp_get_post_tags( $reportage->ID );
         		// Categories
 				$categories = get_post_categories( $reportage );
-		?>
-			
-		<?php endwhile; ?>
+			?>
+				<div class="col-sm-4 col-md-4 grid-item">
+					<article class="thumbnail thumbnail-reportage">
+						<div class="content">
+							<div class="corner">
+								<a href="#" class="triangle triangle-top-right"></a>
+								<span class="label"><i class="material-icons">add</i></span>
+							</div>
+
+							<div class="image">
+								<?php if ( has_post_thumbnail() ) : ?>
+									<?php the_post_thumbnail( 'large' ); ?>
+								<?php else: ?>
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/reportage-cover.jpg" alt="<?php echo $reportage->post_title; ?>" />
+								<?php endif; ?>
+							</div>
+
+							<h2 class="title"><?php echo $reportage->post_title; ?></h2>
+							<a class="see-more-link" href="<?php echo get_permalink( $reportage ); ?>" title="<?php echo $reportage->post_title; ?>">
+								<?php echo __( 'Read the reportage', 'twentyfifteen-child' ); ?>
+							</a>
+							<a class="see-more-link-area" href="<?php echo get_permalink( $reportage ); ?>" title="<?php echo __( 'Read the reportage', 'twentyfifteen-child' ); ?>"></a>
+						</div>
+						<div class="footer">
+							<?php foreach ( $categories as $index => $category ) : ?>
+								<a href="<?php echo get_category_link( $category ); ?>" class="category">
+									<i class="material-icons">local_offer</i><?php echo $category->name; ?>
+								</a>&nbsp;
+							<?php endforeach; ?>
+							<?php foreach ( $tags as $index => $tag ) : ?>
+								<a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
+							<?php endforeach; ?>
+						</div>
+					</article>
+				</div>
+			<?php endwhile; ?>
+	 	</section>
 
 		<!-- Pagination -->
 		<?php if ( function_exists( custom_pagination ) ) : ?>

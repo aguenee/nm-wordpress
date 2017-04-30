@@ -2742,3 +2742,230 @@ a:hover, a:focus {
  * 2.0 - Featured content
  * 3.0 - Single
  */
+/**
+ * 1.0 - Thumbnail
+ */
+/* line 13, sass/layout/_reportage.scss */
+.thumbnail-reportage {
+  background: #fff;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+/* line 19, sass/layout/_reportage.scss */
+.thumbnail-reportage .content {
+  position: relative;
+  padding: 12px 15px 15px;
+}
+/* line 26, sass/layout/_reportage.scss */
+.thumbnail-reportage .content:hover .title {
+  color: #f45844;
+  -webkit-transition: all ease-out 0.5s;
+          transition: all ease-out 0.5s;
+}
+/* line 31, sass/layout/_reportage.scss */
+.thumbnail-reportage .content:hover .see-more-link {
+  border-bottom: 1px solid #f45844;
+}
+/* line 35, sass/layout/_reportage.scss */
+.thumbnail-reportage .content:hover .corner {
+  opacity: 1;
+  -webkit-transition: opacity ease-in-out 0.8s;
+          transition: opacity ease-in-out 0.8s;
+}
+/* line 41, sass/layout/_reportage.scss */
+.thumbnail-reportage .corner {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  opacity: 0;
+}
+/* line 47, sass/layout/_reportage.scss */
+.thumbnail-reportage .corner .label {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  line-height: 20px;
+  color: white;
+}
+/* line 55, sass/layout/_reportage.scss */
+.thumbnail-reportage .corner i {
+  font-size: 75%;
+}
+/* line 60, sass/layout/_reportage.scss */
+.thumbnail-reportage img {
+  display: block;
+  margin: auto;
+}
+/* line 65, sass/layout/_reportage.scss */
+.thumbnail-reportage .title {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 15px;
+  line-height: 20px;
+}
+/* line 74, sass/layout/_reportage.scss */
+.thumbnail-reportage .see-more-link {
+  color: #f45844;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+/* line 80, sass/layout/_reportage.scss */
+.thumbnail-reportage .see-more-link:hover, .thumbnail-reportage .see-more-link:focus {
+  border-bottom: 1px solid;
+}
+/* line 85, sass/layout/_reportage.scss */
+.thumbnail-reportage .footer {
+  padding: 10px;
+  background: #F7F7F7;
+  color: #707070;
+  font-size: 14px;
+}
+/* line 91, sass/layout/_reportage.scss */
+.thumbnail-reportage .footer .tag {
+  float: none;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: lowercase;
+}
+/* line 98, sass/layout/_reportage.scss */
+.thumbnail-reportage .footer .category {
+  float: none;
+  display: inline-block;
+}
+/* line 102, sass/layout/_reportage.scss */
+.thumbnail-reportage .footer .category i {
+  position: relative;
+  top: 2px;
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+/**
+ * 2.0 - Featured content
+ */
+/* line 118, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage {
+  margin: 0 auto 30px;
+}
+/* line 121, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .content {
+  padding: 25px 25px 20px;
+}
+/* line 125, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .image {
+  margin: 0 auto 20px;
+}
+/* line 128, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .image img {
+  width: auto;
+  max-height: 250px;
+}
+/* line 134, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .title {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+/* line 140, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .footer {
+  padding: 10px 25px;
+}
+/* line 143, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .footer a {
+  float: none;
+  margin: 0;
+}
+/* line 148, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .footer .category {
+  font-size: 13px;
+}
+/* line 151, sass/layout/_reportage.scss */
+.featured-content .thumbnail-reportage .footer .category i {
+  font-size: 12px;
+  top: 2px;
+  margin-right: 4px;
+}
+
+/**
+ * 3.0 - Single
+ */
+/* line 164, sass/layout/_reportage.scss */
+#reportage {
+  background: white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+/* line 168, sass/layout/_reportage.scss */
+#reportage .read-link {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  padding: 7px 9px 1px;
+  border: 1px solid;
+  border-radius: 20px 0 20px 20px;
+  -webkit-transition: all ease 0.5s;
+          transition: all ease 0.5s;
+}
+/* line 177, sass/layout/_reportage.scss */
+#reportage .read-link i {
+  font-size: 20px;
+}
+/* line 181, sass/layout/_reportage.scss */
+#reportage .read-link:hover {
+  background: #f45844;
+  border-radius: 20px;
+}
+/* line 185, sass/layout/_reportage.scss */
+#reportage .read-link:hover i {
+  color: white;
+}
+/* line 191, sass/layout/_reportage.scss */
+#reportage .content {
+  padding: 50px 70px;
+}
+/* line 195, sass/layout/_reportage.scss */
+#reportage .title {
+  font-size: 24px;
+  line-height: 1.5em;
+}
+/* line 200, sass/layout/_reportage.scss */
+#reportage .description {
+  font-size: 14px;
+  line-height: 1.8em;
+  margin: 10px 0;
+}
+/* line 206, sass/layout/_reportage.scss */
+#reportage .issuuembed {
+  margin: 40px auto 0;
+}
+/* line 210, sass/layout/_reportage.scss */
+#reportage .reportage-footer {
+  padding: 20px 30px;
+  background: #F7F7F7;
+  color: #707070;
+  font-size: 14px;
+}
+/* line 216, sass/layout/_reportage.scss */
+#reportage .reportage-footer a {
+  margin: 0 5px;
+}
+/* line 220, sass/layout/_reportage.scss */
+#reportage .reportage-footer .tag {
+  float: right;
+  font-size: 13px;
+  text-transform: lowercase;
+}
+/* line 226, sass/layout/_reportage.scss */
+#reportage .reportage-footer .category {
+  float: left;
+}
+/* line 229, sass/layout/_reportage.scss */
+#reportage .reportage-footer .category i {
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+  font-size: 16px;
+}

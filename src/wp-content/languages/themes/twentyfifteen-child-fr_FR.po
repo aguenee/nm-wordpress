@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twentyfifteen-child\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-29 19:41+0000\n"
-"PO-Revision-Date: 2017-04-29 19:42+0000\n"
+"POT-Creation-Date: 2017-04-30 14:41+0000\n"
+"PO-Revision-Date: 2017-04-30 14:41+0000\n"
 "Last-Translator: admin <audreyguenee@free.fr>\n"
 "Language-Team: French (France)\n"
 "Language: fr-FR\n"
@@ -13,17 +13,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: single-story.php:98
-msgid "Previous page"
-msgstr "Page précédente"
-
-#: single-story.php:107
-msgid "Next page"
-msgstr "Page suivante"
-
-#: single-story.php:113
-msgid "The end."
-msgstr "Fin."
+#: page-reportages.php:94 page-reportages.php:96
+msgid "Read the reportage"
+msgstr "Lire le reportage"
 
 #. Name of the theme
 msgid "Twenty Fifteen Child"
@@ -96,7 +88,7 @@ msgstr "Prix"
 msgid "See more"
 msgstr "En savoir +"
 
-#: page-reportages.php:37 inc/custom-post-types.php:88
+#: page-reportages.php:37 single-reportage.php:35 inc/custom-post-types.php:88
 #: partials/taxonomy.php:123
 msgid "Reportages"
 msgstr "Reportages"
@@ -114,7 +106,7 @@ msgstr "Lire l'histoire"
 msgid "Book"
 msgstr "Livre"
 
-#: single-book.php:54 single-story.php:64
+#: single-book.php:54 single-reportage.php:43 single-story.php:64
 msgid "Back to the list"
 msgstr "Retour à la liste"
 
@@ -126,7 +118,7 @@ msgstr "Presse"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: single-book.php:74
+#: single-book.php:74 single-reportage.php:54
 msgid "Read +"
 msgstr "Lire +"
 
@@ -141,6 +133,18 @@ msgstr "Sur le même thème"
 #: inc/custom-post-types.php:15
 msgid "Story"
 msgstr "Histoire"
+
+#: single-story.php:98
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: single-story.php:107
+msgid "Next page"
+msgstr "Page suivante"
+
+#: single-story.php:113
+msgid "The end."
+msgstr "Fin."
 
 #: inc/custom-post-types.php:17 inc/custom-post-types.php:54
 #: inc/custom-post-types.php:91

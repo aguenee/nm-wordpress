@@ -128,9 +128,46 @@
         </div>
     </div>
 
-    <div class="row section-content">
-        <div class="col-sm-4 col-md-4">
-            <!-- TODO -->
-        </div>
+    <div class="row transitions-enabled fluid masonry js-masonry grid section-content">
+        <?php while ( $reportages->have_posts() ) :
+            // Post
+            $reportage = get_post( $reportages->the_post() );
+            // Cover
+            $coverImage = get_the_post_thumbnail( $reportage, 'medium' );
+            // Tags
+            $tags = wp_get_post_tags( $reportage->ID );
+            // Categories
+            $categories = get_post_categories( $reportage );
+        ?>
+            <div class="col-sm-4 col-md-4 grid-item">
+                <article class="thumbnail thumbnail-reportage">
+                    <div class="content">
+                        <div class="corner">
+                            <a href="#" class="triangle triangle-top-right"></a>
+                            <span class="label"><i class="material-icons">add</i></span>
+                        </div>
+                        <div class="image clearfix">
+                            <?php if ( $coverImage ): ?>
+                               <?php echo $coverImage; ?>
+                            <?php else: ?>
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/reportage-cover.jpg" alt="<?php echo $reportage->post_title; ?>" />
+                            <?php endif; ?>
+                        </div>
+                        <h3 class="title"><?php echo $reportage->post_title; ?></h3>
+                        <a class="see-more-link-area" href="<?php echo get_permalink( $reportage ); ?>" title="<?php echo __( 'See more', 'twentyfifteen-child' ); ?>"></a>
+                    </div>
+                    <div class="footer">
+                        <?php foreach ( $categories as $index => $category ) : ?>
+                            <a href="<?php echo get_category_link( $category ); ?>" class="category">
+                                <i class="material-icons">local_offer</i><?php echo $category->name; ?>
+                            </a>&nbsp;
+                        <?php endforeach; ?>
+                        <?php foreach ( $tags as $index => $tag ) : ?>
+                            <a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
+                        <?php endforeach; ?>
+                    </div>
+                </article>
+            </div>
+        <?php endwhile; ?>
     </div>
 </section>

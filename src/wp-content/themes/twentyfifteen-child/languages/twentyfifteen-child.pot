@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-29 19:41+0000\n"
+"POT-Creation-Date: 2017-04-30 14:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -69,9 +69,13 @@ msgstr ""
 msgid "See more"
 msgstr ""
 
-#: page-reportages.php:37 inc/custom-post-types.php:88
+#: page-reportages.php:37 single-reportage.php:35 inc/custom-post-types.php:88
 #: partials/taxonomy.php:123
 msgid "Reportages"
+msgstr ""
+
+#: page-reportages.php:94 page-reportages.php:96
+msgid "Read the reportage"
 msgstr ""
 
 #: page-stories.php:36 single-story.php:56 inc/custom-post-types.php:14
@@ -87,7 +91,7 @@ msgstr ""
 msgid "Book"
 msgstr ""
 
-#: single-book.php:54 single-story.php:64
+#: single-book.php:54 single-reportage.php:43 single-story.php:64
 msgid "Back to the list"
 msgstr ""
 
@@ -99,7 +103,7 @@ msgstr ""
 msgid "Videos"
 msgstr ""
 
-#: single-book.php:74
+#: single-book.php:74 single-reportage.php:54
 msgid "Read +"
 msgstr ""
 

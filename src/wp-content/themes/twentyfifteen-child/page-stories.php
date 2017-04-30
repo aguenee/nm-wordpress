@@ -63,65 +63,65 @@ $stories = new WP_Query( array(
 	<?php if ( $stories->have_posts() ) : ?>
 		<section class="row transitions-enabled fluid masonry js-masonry grid bb-custom-grid" id="bb-custom-grid">
 
-		<?php while ( $stories->have_posts() ) :
-			// Post
-			$story = get_post( $stories->the_post() );
-			// Publication date
-			$publicationDate = new DateTime( $story->post_date );
-			// Description
-        	$description = wp_strip_all_tags( get_post_field( 'post_content', $story ) );
-        	$description = strlen( $description ) > 100 ? mb_substr( $description, 0, 100 ) . '...' : $description;
-        	// Tags
-        	$tags = wp_get_post_tags( $story->ID );
-    		// Categories
-			$categories = get_post_categories( $story );
-		?>
-			<div class="col-sm-4 col-md-4 grid-item">
-				<article class="thumbnail thumbnail-story bb-custom-item">
-					<div class="content">
-						<div class="corner">
-							<a href="#" class="triangle triangle-top-right"></a>
-							<span class="label"><i class="material-icons">add</i></span>
-						</div>
-						<h2 class="title"><?php echo $story->post_title; ?></h2>
-						<div class="bb-bookblock">
-						<?php $nbCoverImages = 0; ?>
-						<?php for ( $i = 1; $i <= 3; ++$i ) { ?>
-							<?php $coverImage = get_field( 'carousel_picture_' . $i, $story ); ?>
-							<?php if ( !$coverImage ) { break; } ?>
-							<div class="bb-item">
-								<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $story->post_title; ?>" />
+			<?php while ( $stories->have_posts() ) :
+				// Post
+				$story = get_post( $stories->the_post() );
+				// Publication date
+				$publicationDate = new DateTime( $story->post_date );
+				// Description
+	        	$description = wp_strip_all_tags( get_post_field( 'post_content', $story ) );
+	        	$description = strlen( $description ) > 100 ? mb_substr( $description, 0, 100 ) . '...' : $description;
+	        	// Tags
+	        	$tags = wp_get_post_tags( $story->ID );
+	    		// Categories
+				$categories = get_post_categories( $story );
+			?>
+				<div class="col-sm-4 col-md-4 grid-item">
+					<article class="thumbnail thumbnail-story bb-custom-item">
+						<div class="content">
+							<div class="corner">
+								<a href="#" class="triangle triangle-top-right"></a>
+								<span class="label"><i class="material-icons">add</i></span>
 							</div>
-							<?php $nbCoverImages++; ?>
-						<?php } ?>
+							<h2 class="title"><?php echo $story->post_title; ?></h2>
+							<div class="bb-bookblock">
+							<?php $nbCoverImages = 0; ?>
+							<?php for ( $i = 1; $i <= 3; ++$i ) { ?>
+								<?php $coverImage = get_field( 'carousel_picture_' . $i, $story ); ?>
+								<?php if ( !$coverImage ) { break; } ?>
+								<div class="bb-item">
+									<img src="<?php echo $coverImage['sizes']['medium_large']; ?>" alt="<?php echo $story->post_title; ?>" />
+								</div>
+								<?php $nbCoverImages++; ?>
+							<?php } ?>
+							</div>
+							<?php if ( $nbCoverImages > 1 ) : ?>
+								<nav>
+									<?php for ( $j = 1; $j <= $nbCoverImages; ++$j ) { ?>
+										<span class="<?php echo $j === 1 ? 'bb-current' : ''; ?>"></span>
+									<?php } ?>
+								</nav>
+							<?php endif; ?>
+							<!--<small class="publication-date"><?php echo $publicationDate->format('d/m/Y'); ?></small>-->
+							<p class="description"><?php echo $description; ?></p>
+							<a class="see-more-link" href="<?php echo get_permalink( $story ); ?>" title="<?php echo $story->post_title; ?>">
+								<?php echo __( 'Read the story', 'twentyfifteen-child' ); ?>
+							</a>
+							<a class="see-more-link-area" href="<?php echo get_permalink( $story ); ?>" title="<?php echo __( 'Read the story', 'twentyfifteen-child' ); ?>"></a>
 						</div>
-						<?php if ( $nbCoverImages > 1 ) : ?>
-							<nav>
-								<?php for ( $j = 1; $j <= $nbCoverImages; ++$j ) { ?>
-									<span class="<?php echo $j === 1 ? 'bb-current' : ''; ?>"></span>
-								<?php } ?>
-							</nav>
-						<?php endif; ?>
-						<!--<small class="publication-date"><?php echo $publicationDate->format('d/m/Y'); ?></small>-->
-						<p class="description"><?php echo $description; ?></p>
-						<a class="see-more-link" href="<?php echo get_permalink( $story ); ?>" title="<?php echo $story->post_title; ?>">
-							<?php echo __( 'Read the story', 'twentyfifteen-child' ); ?>
-						</a>
-						<a class="see-more-link-area" href="<?php echo get_permalink( $story ); ?>" title="<?php echo __( 'Read the story', 'twentyfifteen-child' ); ?>"></a>
-					</div>
-					<div class="footer">
-						<?php foreach ( $categories as $index => $category ) : ?>
-							<a href="<?php echo get_category_link( $category ); ?>" class="category">
-								<i class="material-icons">local_offer</i><?php echo $category->name; ?>
-							</a>&nbsp;
-						<?php endforeach; ?>
-						<?php foreach ( $tags as $index => $tag ) : ?>
-							<a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
-						<?php endforeach; ?>
-					</div>
-				</article>
-			</div>
-		<?php endwhile; ?>
+						<div class="footer">
+							<?php foreach ( $categories as $index => $category ) : ?>
+								<a href="<?php echo get_category_link( $category ); ?>" class="category">
+									<i class="material-icons">local_offer</i><?php echo $category->name; ?>
+								</a>&nbsp;
+							<?php endforeach; ?>
+							<?php foreach ( $tags as $index => $tag ) : ?>
+								<a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
+							<?php endforeach; ?>
+						</div>
+					</article>
+				</div>
+			<?php endwhile; ?>
 		</section>
 
 		<!-- Pagination -->

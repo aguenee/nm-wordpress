@@ -8,145 +8,129 @@ get_header(); ?>
 
 <?php
 // Start the loop.
-while ( have_posts() ) : the_post(); ?>
+while ( have_posts() ) : the_post();
+    // Tags
+    $tags = wp_get_post_tags( $post->ID );
+    // Categories
+    $categories = get_post_categories( $post );
+    // Featured books
+    $featuredReportages = get_featured_posts(
+        $post,
+        [
+            'categories' => wp_get_post_categories( $post->ID ),
+            'tags' => wp_get_post_terms( $post->ID, 'post_tag', array( 'fields' => 'ids' ) )
+        ],
+        true,
+        3
+    );
+?>
 
-<h2><?php the_title(); ?></h2>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main container" role="main">
 
-<p>
-	<?php the_content(); ?>
-</p>
-<!-- <?php echo get_stylesheet_directory_uri(); ?>/img/default/magazine-1.jpg) -->
+    <div class="row">
+        <div class="col-sm-8 col-md-8">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="<?php echo get_permalink( PAGE_REPORTAGES_ID ); ?>"><?php echo __( 'Reportages', 'twentyfifteen-child' ); ?></a>
+                <span class="separator">&raquo;</span>
+                <h2 class="current-page"><?php the_title(); ?></h2>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <a href="<?php echo get_permalink( PAGE_REPORTAGES_ID ); ?>" class="button button-back">
+              <i class="material-icons">arrow_back</i>
+              <?php echo __( 'Back to the list', 'twentyfifteen-child' ); ?>
+            </a>
+        </div>
+    </div>
 
-<!-- pdfjs -->
-<div style="width: 80%; margin: auto; display: block;">
-	<div>
-	  <button id="prev">Previous</button>
-	  <button id="next">Next</button>
-	  &nbsp; &nbsp;
-	  <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-	</div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <article id="reportage">
+                <div class="content">
+                    <h2 class="title"><?php the_title(); ?></h2>
 
-	<div>
-	  <canvas id="the-canvas" style="border:1px solid black; max-width: 100%;"></canvas>
-	</div>
-</div>
+                    <a class="read-link" href="#" title="<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>">
+                        <i class="material-icons">book</i>
+                    </a>
+
+                    <div class="description">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+                <div class="reportage-footer">
+                    <?php foreach ( $tags as $index => $tag ) : ?>
+                        <a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
+                    <?php endforeach; ?>
+                    <?php foreach ( $categories as $index => $category ) : ?>
+                        <a href="<?php echo get_category_link( $category ); ?>" class="category">
+                            <i class="material-icons">local_offer</i><?php echo $category->name; ?>
+                        </a>&nbsp;
+                    <?php endforeach; ?>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Featured content -->
+    <?php if ( !empty($featuredReportages) ) : ?>
+        <section class="featured-content">
+            <div class="row">
+                <div class="header col-sm-12 col-md-12">
+                    <h3><?php echo __( 'Around the same theme', 'twentyfifteen-child' ); ?></h3>
+                </div>
+            
+                <?php $containerSize = count( $featuredReportages ) * 4; ?>
+                <div class="items <?php echo 'col-sm-' . $containerSize . ' col-md-' . $containerSize; ?>">
+                    <div class="row">
+                    <?php $colSize = 12 / count( $featuredReportages ); ?>
+
+                    <?php foreach ( $featuredReportages as $featuredReportage ) :
+                            // Cover
+                            $coverImage = get_the_post_thumbnail( $featuredReportage, 'medium' );
+                            // Tags
+                            $tags = wp_get_post_tags( $featuredReportage->ID );
+                            // Categories
+                            $categories = get_post_categories( $featuredReportage );
+                    ?>
+                        <div class="<?php echo 'col-sm-' . $colSize . ' col-md-' . $colSize; ?>">
+                            <article class="thumbnail thumbnail-reportage">
+                                <div class="content">
+                                    <div class="corner">
+                                        <a href="#" class="triangle triangle-top-right"></a>
+                                        <span class="label"><i class="material-icons">add</i></span>
+                                    </div>
+                                    <div class="image clearfix">
+                                        <?php if ( $coverImage ): ?>
+                                            <?php echo $coverImage; ?>
+                                        <?php else: ?>
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/default/reportage-cover.jpg" alt="<?php echo $featuredReportage->post_title; ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                    <h3 class="title"><?php echo $featuredReportage->post_title; ?></h3>
+                                    <a class="see-more-link-area" href="<?php echo get_permalink( $featuredReportage ); ?>" title="<?php echo __( 'See more', 'twentyfifteen-child' ); ?>"></a>
+                                </div>
+                                <div class="footer">
+                                    <?php foreach ( $categories as $index => $category ) : ?>
+                                        <a href="<?php echo get_category_link( $category ); ?>" class="category">
+                                            <i class="material-icons">local_offer</i><?php echo $category->name; ?>
+                                        </a>&nbsp;
+                                    <?php endforeach; ?>
+                                    <?php foreach ( $tags as $index => $tag ) : ?>
+                                        <a href="<?php echo get_term_link( $tag ); ?>" class="tag">#<?php echo $tag->name; ?></a>&nbsp;
+                                    <?php endforeach; ?>
+                                </div>
+                            </article>
+                        </div>
+                    <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
 <?php endwhile; ?>
 
-<!-- for legacy browsers add compatibility.js -->
-<!--<script src="../compatibility.js"></script>-->
-
-<!--<script src="<?php get_stylesheet_directory_uri() ?>/node_modules/pdfjs-dist/build/pdf.js"></script>-->
-
-<script id="script">
-  //
-  // If absolute URL from the remote server is provided, configure the CORS
-  // header on that server.
-  //
-  var url = '/wp-content/uploads/2017/01/demodoc.pdf';
-
-
-  //
-  // Disable workers to avoid yet another cross-origin issue (workers need
-  // the URL of the script to be loaded, and dynamically loading a cross-origin
-  // script does not work).
-  //
-  // PDFJS.disableWorker = true;
-
-  //
-  // In cases when the pdf.worker.js is located at the different folder than the
-  // pdf.js's one, or the pdf.js is executed via eval(), the workerSrc property
-  // shall be specified.
-  //
-  // PDFJS.workerSrc = '../../build/pdf.worker.js';
-
-  var pdfDoc = null,
-      pageNum = 1,
-      pageRendering = false,
-      pageNumPending = null,
-      scale = 0.8,
-      canvas = document.getElementById('the-canvas'),
-      ctx = canvas.getContext('2d');
-
-  /**
-   * Get page info from document, resize canvas accordingly, and render page.
-   * @param num Page number.
-   */
-  function renderPage(num) {
-    pageRendering = true;
-    // Using promise to fetch the page
-    pdfDoc.getPage(num).then(function(page) {
-      var viewport = page.getViewport(scale);
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-
-      // Render PDF page into canvas context
-      var renderContext = {
-        canvasContext: ctx,
-        viewport: viewport
-      };
-      var renderTask = page.render(renderContext);
-
-      // Wait for rendering to finish
-      renderTask.promise.then(function () {
-        pageRendering = false;
-        if (pageNumPending !== null) {
-          // New page rendering is pending
-          renderPage(pageNumPending);
-          pageNumPending = null;
-        }
-      });
-    });
-
-    // Update page counters
-    document.getElementById('page_num').textContent = pageNum;
-  }
-
-  /**
-   * If another page rendering in progress, waits until the rendering is
-   * finised. Otherwise, executes rendering immediately.
-   */
-  function queueRenderPage(num) {
-    if (pageRendering) {
-      pageNumPending = num;
-    } else {
-      renderPage(num);
-    }
-  }
-
-  /**
-   * Displays previous page.
-   */
-  function onPrevPage() {
-    if (pageNum <= 1) {
-      return;
-    }
-    pageNum--;
-    queueRenderPage(pageNum);
-  }
-  document.getElementById('prev').addEventListener('click', onPrevPage);
-
-  /**
-   * Displays next page.
-   */
-  function onNextPage() {
-    if (pageNum >= pdfDoc.numPages) {
-      return;
-    }
-    pageNum++;
-    queueRenderPage(pageNum);
-  }
-  document.getElementById('next').addEventListener('click', onNextPage);
-
-  /**
-   * Asynchronously downloads PDF.
-   */
-  PDFJS.getDocument(url).then(function (pdfDoc_) {
-    pdfDoc = pdfDoc_;
-    document.getElementById('page_count').textContent = pdfDoc.numPages;
-
-    // Initial/first page rendering
-    renderPage(pageNum);
-  });
-</script>
 
 <?php get_footer(); ?>
