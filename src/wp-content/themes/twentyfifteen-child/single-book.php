@@ -24,6 +24,9 @@ while ( have_posts() ) : the_post();
 	$tags = wp_get_post_tags( $post->ID );
 	// Categories
 	$categories = get_post_categories( $post );
+	// Linked content
+	$linkedContent = get_field( 'linked_content', $post, false );
+	$linkedContent = $linkedContent ? $linkedContent[0] : null;
 	// Featured books
 	$featuredBooks = get_featured_posts(
 		$post,
@@ -71,9 +74,11 @@ while ( have_posts() ) : the_post();
 				            <h2 class="title"><?php the_title(); ?></h2>
 				            <h3 class="authors"><?php echo $authors; ?></h3>
 
-				            <a class="read-link" href="#" title="<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>">
-				            	<i class="material-icons">book</i>
-							</a>
+				            <?php if ( $linkedContent ) : ?>
+					            <a class="read-link" href="<?php echo get_permalink( $linkedContent ); ?>" title="<?php echo __( 'Read +', 'twentyfifteen-child' ); ?>">
+					            	<i class="material-icons">book</i>
+								</a>
+							<?php endif; ?>
 
 				            <div class="description clearfix">
 					            <?php if ( $coverImage ): ?>

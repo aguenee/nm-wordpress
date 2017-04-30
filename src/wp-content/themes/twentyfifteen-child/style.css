@@ -2940,29 +2940,30 @@ a:hover, a:focus {
 /* line 206, sass/layout/_reportage.scss */
 #reportage .issuuembed {
   margin: 40px auto 0;
+  max-width: 100%;
 }
-/* line 210, sass/layout/_reportage.scss */
+/* line 211, sass/layout/_reportage.scss */
 #reportage .reportage-footer {
   padding: 20px 30px;
   background: #F7F7F7;
   color: #707070;
   font-size: 14px;
 }
-/* line 216, sass/layout/_reportage.scss */
+/* line 217, sass/layout/_reportage.scss */
 #reportage .reportage-footer a {
   margin: 0 5px;
 }
-/* line 220, sass/layout/_reportage.scss */
+/* line 221, sass/layout/_reportage.scss */
 #reportage .reportage-footer .tag {
   float: right;
   font-size: 13px;
   text-transform: lowercase;
 }
-/* line 226, sass/layout/_reportage.scss */
+/* line 227, sass/layout/_reportage.scss */
 #reportage .reportage-footer .category {
   float: left;
 }
-/* line 229, sass/layout/_reportage.scss */
+/* line 230, sass/layout/_reportage.scss */
 #reportage .reportage-footer .category i {
   position: relative;
   top: 4px;
