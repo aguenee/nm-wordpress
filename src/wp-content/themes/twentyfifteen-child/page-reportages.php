@@ -9,15 +9,14 @@ get_header();
 // Get sort parameter
 $sortby = $_GET['sortby'] ? $_GET['sortby'] : 'date_desc';
 $sortInfos = explode( '_', $sortby );
-$orderby = $sortInfos[0] == 'date' ? 'meta_value' : $sortInfos[0];
+$orderby = $sortInfos[0];
 $order = $sortInfos[1];
 
 // Get reportages
 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 $reportages = new WP_Query( array(
-	//'meta_key'		 => 'book_publication_date',
-	'orderby'		 => 'date', //$orderby,
-	'order'          => 'DESC', //$order,
+	'orderby'		 => $orderby,
+	'order'          => $order,
 	'posts_per_page' => POSTS_PER_PAGE,
 	'paged' 		 => $paged,
 	'post_type' 	 => 'reportage',
