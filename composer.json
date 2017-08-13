@@ -26,6 +26,7 @@
         "wpackagist-plugin/google-analytics-dashboard-for-wp": "^4.9.5"
     },
     "require-dev": {
+        "phing/phing": "2.*"
     },
     "extra": {
         "installer-paths": {
